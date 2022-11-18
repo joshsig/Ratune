@@ -218,6 +218,7 @@ i:hover{
 .progress-container{
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1em;
@@ -227,6 +228,7 @@ i:hover{
     width: 30%;
     background-color: #ccc4;
 }
+
 .progress{
     position: relative;
     height: 100%;
@@ -251,24 +253,21 @@ i:hover{
 }
 
 .slider_container {
-  width: 75%;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    border-radius: 10px;
+    color: var(--color-blurple);
+    background-color: var(--secondary-color);
 }
 
-/* Modify the appearance of the slider */
 .seek_slider, .volume_slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   height: 5px;
-  background: black;
+  background: #303030;
+  color: #6d2994;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
+
 
 /* Modify the appearance of the slider thumb */
 .seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
@@ -313,3 +312,7 @@ i:hover{
 .volume-bar .progress-bar:hover .progress::after{
     --size: .8em;
 }
+
+.current-time, .total-duration {
+    padding: 10px;
+  }
