@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ratune</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+
+    <!--Sidebar Navigation-->
+    <nav>
+      <ul class="sidebar-container">
+        <li class="sidebar-button">
+          <img class="icon" src="imgs/berto" alt="Berto">
+          <div class="popper">
+            <h4 class="popper-text">Profile</h4>
+          </div>
+        </li>
+        <li class="divider"></li>
+        <li class="sidebar-button">
+          <img class="icon" src="imgs/audio-playlist-icon.png" alt="Playlists">
+          <div class="popper">
+            <h4 class="popper-text">Playlists</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
+          <img class="icon" src="imgs/wishlist-icon.png" alt="Likes">
+          <div class="popper">
+            <h4 class="popper-text">Likes</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
+          <img class="icon" src="imgs/settings-gear-icon.png" alt="Settings">
+          <div class="popper">
+            <h4 class="popper-text">Settings</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
+          <img class="icon" src="imgs/globe-network-icon.png" alt="Explore">
+          <div class="popper">
+            <h4 class="popper-text">Explore</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
+          <img class="icon" src="imgs/plus-line-icon.png" alt="Likes">
+          <div class="popper">
+            <h4 class="popper-text">Create a Post!</h4>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- music player at bottom of screen -->
+    <div class="music-player">
+      <div class="song-bar">
+        <div class="song-info">
+          <div class="image-container">
+            <img src="https://media.pitchfork.com/photos/632df5031dccce609e4162d7/4:3/w_2000,h_1500,c_limit/Lil-Baby.jpg" alt="" />
+          </div>
+          <div class="song-desc">
+            <p class="title">Turkey Basted</p>
+            <p class="artist">Berto</p>
+          </div>
+        </div>
+        <div class="icon-like" onclick="likeunlike()">
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+      <div class="progress-controller">
+        <div class="slider-container">
+          <div class="current-time">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+          <div class="total-duration">00:00</div>
+        </div>
+        <div class="slider_container">
+        <div class="control-buttons">
+          <i class="fas fa-step-backward"></i>
+          <div class="playpause-song" onclick="playpauseTrack()">
+            <i class="fa fa-play-circle fa-2x"></i>
+          </div>
+          <i class="fas fa-step-forward"></i>
+        </div>
+        
+      </div>
+      <div class="features">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-share-alt"></i>
+        <div class="volume-bar">
+          <div class="volume-btn" onclick="muteunmute()">
+            <i class="fas fa-volume-down"></i>
+          </div>
+          <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="music.js"></script>
+  </body>
+</html>
