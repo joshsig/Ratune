@@ -10,8 +10,10 @@ let track_art = document.querySelector(".image-container");
 let track_name = document.querySelector(".title");
 let track_artist = document.querySelector(".artist");
 
+let next_btn = document.querySelector(".next-btn");
+let prev_btn = document.querySelector(".prev-btn");
 let seek_slider = document.querySelector(".seek-slider");
-let volume_slider = document.querySelector(".volume-bar")
+let volume_slider = document.querySelector(".volume-slider")
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 
@@ -25,6 +27,9 @@ let updateTimer;
 
 let curr_track = document.createElement('audio');
 
+curr_track.volume = 6/100;
+let prev_vol = 6/100;
+
 let track_list = [
   {
     name: "Thinkin Bout You",
@@ -35,13 +40,13 @@ let track_list = [
   {
     name: "Salad Days",
     artist: "Mac Demarco",
-    image: "https://thefader-res.cloudinary.com/private_images/w_760,c_limit,f_auto,q_auto:best/Screen_Shot_2017-02-20_at_12.25.56_PM_u0wced/steve-lacy-dark-red-single-steve-lacys-demo-the-internet.jpg",
-    song: "songs/DarkRed.mp3"
+    image: "https://upload.wikimedia.org/wikipedia/en/8/81/MacDeMarcoSaladDays.png",
+    song: "songs/SaladDays.mp3"
   },
   {
     name: "Dark Red",
     artist: "Steve Lacy",
-    image: "https://upload.wikimedia.org/wikipedia/en/8/81/MacDeMarcoSaladDays.png",
+    image: "https://thefader-res.cloudinary.com/private_images/w_760,c_limit,f_auto,q_auto:best/Screen_Shot_2017-02-20_at_12.25.56_PM_u0wced/steve-lacy-dark-red-single-steve-lacys-demo-the-internet.jpg",
     song: "songs/DarkRed.mp3"
   }
 ]
@@ -67,6 +72,7 @@ function playpauseTrack() {
   function playTrack() {
     // Play the loaded track
    //curr_track.play();
+    curr_track.play();
     isPlaying = true;
 
     // replace icon w pause icon
@@ -76,6 +82,7 @@ function playpauseTrack() {
   function pauseTrack() {
     // Pause the loaded track
   // curr_track.pause();
+    curr_track.pause();  
     isPlaying = false;
     
     // replace icon w play icon
@@ -102,12 +109,15 @@ function playpauseTrack() {
   }
 
   function mute() {
-     muted = true;
-   mute_btn.innerHTML = '<i class="fas fa-volume-off"></i>';
+    muted = true;
+    prev_vol = curr_track.volume;
+    curr_track.volume = 0;
+    mute_btn.innerHTML = '<i class="fas fa-volume-off"></i>';
   }
 
   function unmute() {
     muted = false;
+    curr_track.volume = prev_vol;
     mute_btn.innerHTML = '<i class="fas fa-volume-down"></i>';
   }
 
@@ -120,12 +130,14 @@ function playpauseTrack() {
 function loadTrack(track_index) {
     clearInterval(updateTimer);
     resetValues();
-    curr_track.src = track_list[track_index].song;
+    track = track_index%3;
+    curr_track.src = track_list[track].song;
     curr_track.load();
-  
-    track_art.innerHTML = '<img href="" alt="cover"' 
-    track_name.textContent = track_list[track_index].name;
-    track_artist.textContent = track_list[track_index].artist;
+    track_art.innerHTML = `<img
+    src="${track_list[track].image}"
+    alt="cover"/>`;
+    track_name.textContent = track_list[track].name;
+    track_artist.textContent = track_list[track].artist;
   
     updateTimer = setInterval(seekUpdate, 1000);
     curr_track.addEventListener("ended", nextTrack);
@@ -155,7 +167,7 @@ function seekTo() {
 }
 
 function setVolume() {
-  curr_track.volume = volume_slider.value / 100;
+  curr_track.volume = volume_slider.value / 200;
 }
 
 function seekUpdate() {

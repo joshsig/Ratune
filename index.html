@@ -16,36 +16,42 @@
     <nav>
       <ul class="sidebar-container">
         <li class="sidebar-button">
+          <a href="#" class="icon">
           <img class="icon" src="imgs/berto" alt="Berto" />
+          </a>
           <div class="popper">
             <h4 class="popper-text">Profile</h4>
           </div>
         </li>
         <li class="divider"></li>
         <li class="sidebar-button">
-          <img
-            class="icon"
-            src="imgs/playlist.jpg"
-            alt="Playlists"
-          />
+          <a href="#" class="icon">
+            <img class="icon" src="imgs/playlist.jpg" alt="Playlists" />
+          </a>
           <div class="popper">
             <h4 class="popper-text">Playlists</h4>
           </div>
         </li>
         <li class="sidebar-button">
-          <img class="icon" src="imgs/likes.jpg" alt="Likes" />
+          <a href="#" class="icon">
+            <img class="icon" src="imgs/likes.jpg" alt="Likes" />
+          </a>
           <div class="popper">
             <h4 class="popper-text">Likes</h4>
           </div>
         </li>
         <li class="sidebar-button">
-          <img class="icon" src="imgs/settings.jpg" alt="Settings" />
+          <a href="#" class="icon">
+            <img class="icon" src="imgs/settings.jpg" alt="Settings" />
+          </a>
           <div class="popper">
             <h4 class="popper-text">Settings</h4>
           </div>
         </li>
         <li class="sidebar-button">
+          <a href="#" class="icon">
           <img class="icon" src="imgs/explore.jpg" alt="Explore" />
+          </a>
           <div class="popper">
             <h4 class="popper-text">Explore</h4>
           </div>
@@ -80,16 +86,21 @@
       <div class="progress-controller">
         <div class="slider-container">
           <div class="current-time">00:00</div>
-            <input type="range" value="0" class="seek-slider">
+            <input type="range" value="0" class="seek-slider" onchange="seekTo()">
           <div class="total-duration">00:00</div>
         </div>
     
     <div class="control-buttons">
-      <i class="fas fa-step-backward"></i>
+        <div class="prev-btn" onclick="prevTrack()">
+          <i class="fas fa-step-backward"></i>
+        </div>
       <div class="playpause-song" onclick="playpauseTrack()">
-        <i class="fa fa-play-circle fa-2x"></i>
+        
+          <i class="fa fa-play-circle fa-2x"></i>
       </div>
+      <div class="next-btn" onclick="nextTrack()">
       <i class="fas fa-step-forward"></i>
+    </div>
     </div>
   </div>
     <div class="features">
@@ -125,11 +136,12 @@
           <i class="fas fa-volume-down"></i>
         </div>
         <div class="progress-bar">
-          <input type="range" value="0" class="volume-bar">
+          <input type="range" min="1" max="100" value="6" class="volume-slider" onchange="setVolume()">
         </div>
       </div>
     </div>
 
     <script src="music.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
