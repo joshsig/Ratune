@@ -294,13 +294,15 @@ input[type=range]::-webkit-slider-thumb {
   }
 
 .share-popup {
-    background-color: #fff;
+    background-color: #303040;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-75%, -110%);
-    padding: 20px;
+    width: 170%;
+    transform: translate(-65%, -110%);
+    padding: 15px;
     border-radius: 10%;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.1);
     opacity: 0%;
     pointer-events: none;
 }
@@ -308,6 +310,9 @@ input[type=range]::-webkit-slider-thumb {
 .share-popup.show {
     opacity: 1;
     pointer-events: auto;
+    transition: top 0s 0s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
 }
 
 .share-popup header {
@@ -323,6 +328,13 @@ input[type=range]::-webkit-slider-thumb {
     border: none;
     outline: none;
     height: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.share-content button {
+    padding: 5px 10px;
+    
 }
 
 header .close-share {
@@ -334,7 +346,7 @@ header .close-share {
     cursor: pointer;
 }
 
-.share-popup .share-content {
+.share-content {
     margin: 20px 0;
 }
 
@@ -343,11 +355,14 @@ header .close-share {
 }
 
 .share-icons {
-    margin: 15px 0 20px 0;
+    justify-content: space-between;
+    margin: 10px 0 0 10px;
+    transform: scale(1.6);
 }
 
 .share-icons a {
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     text-decoration: none;
+    justify-content: space-between;
 }
