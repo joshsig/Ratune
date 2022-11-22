@@ -1,10 +1,22 @@
 let playpause_btn = document.querySelector(".playpause-song");
 let like_btn = document.querySelector(".icon-like");
-let mute_btn = document.querySelector(".volume-btn")
+let mute_btn = document.querySelector(".volume-btn");
+
+const viewShare = document.querySelector(".share-btn");
+popup = document.querySelector(".share-popup");
+close = popup.querySelector(".close-share");
 
 let isPlaying = false;
 let muted = false;
 let liked = false;
+
+viewShare.onclick = ()=>{
+  popup.classList.toggle("show");
+}
+close.onclick = ()=>{
+  viewShare.click();
+}
+
 
 function playpauseTrack() {
     // Switch between playing and pausing
@@ -36,21 +48,14 @@ function playpauseTrack() {
 
   function likeunlike() {
     if(!liked) {
-        like();
+      liked = !liked;
+      like_btn.innerHTML = '<i class="fas fa-heart" style="color: #8714B1"></i>';
     } else {
-        unlike();
+        liked = !liked;
+        like_btn.innerHTML = '<i class="fas fa-heart"></i>';
     }
   }
 
-  function unlike() {
-    like = false;
-    like_btn.innerHTML = '<i class="fas fa-heart"></i>';
-  }
-
-  function like() {
-    like = true;
-    like_btn.innerHTML = '<i class="fas fa-heart" style="color: #baa3c7"></i>';
-  }
 
   function muteunmute() {
     if(muted) {
@@ -68,4 +73,8 @@ function playpauseTrack() {
   function unmute() {
     muted = false;
     mute_btn.innerHTML = '<i class="fas fa-volume-down"></i>';
+  }
+
+  function shareTab() {
+    console.log("Sharing shit lfg!");
   }

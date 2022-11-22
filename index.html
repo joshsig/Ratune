@@ -5,47 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ratune</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <!--Sidebar Navigation-->
     <nav>
       <ul class="sidebar-container">
         <li class="sidebar-button">
-          <img class="icon" src="imgs/berto" alt="Berto">
+          <img class="icon" src="imgs/berto" alt="Berto" />
           <div class="popper">
             <h4 class="popper-text">Profile</h4>
           </div>
         </li>
         <li class="divider"></li>
         <li class="sidebar-button">
-          <img class="icon" src="imgs/audio-playlist-icon.png" alt="Playlists">
+          <img
+            class="icon"
+            src="imgs/playlist.jpg"
+            alt="Playlists"
+          />
           <div class="popper">
             <h4 class="popper-text">Playlists</h4>
           </div>
         </li>
         <li class="sidebar-button">
-          <img class="icon" src="imgs/wishlist-icon.png" alt="Likes">
+          <img class="icon" src="imgs/likes.jpg" alt="Likes" />
           <div class="popper">
             <h4 class="popper-text">Likes</h4>
           </div>
         </li>
         <li class="sidebar-button">
-          <img class="icon" src="imgs/settings-gear-icon.png" alt="Settings">
+          <img class="icon" src="imgs/settings.jpg" alt="Settings" />
           <div class="popper">
             <h4 class="popper-text">Settings</h4>
           </div>
         </li>
         <li class="sidebar-button">
-          <img class="icon" src="imgs/globe-network-icon.png" alt="Explore">
+          <img class="icon" src="imgs/explore.jpg" alt="Explore" />
           <div class="popper">
             <h4 class="popper-text">Explore</h4>
           </div>
         </li>
         <li class="sidebar-button">
-          <img class="icon" src="imgs/plus-line-icon.png" alt="Likes">
+          <img class="icon" src="imgs/post.jpg" alt="Likes" />
           <div class="popper">
             <h4 class="popper-text">Create a Post!</h4>
           </div>
@@ -57,11 +63,14 @@
       <div class="song-bar">
         <div class="song-info">
           <div class="image-container">
-            <img src="https://media.pitchfork.com/photos/632df5031dccce609e4162d7/4:3/w_2000,h_1500,c_limit/Lil-Baby.jpg" alt="" />
+            <img
+              src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+              alt="cover"
+            />
           </div>
           <div class="song-desc">
             <p class="title">Turkey Basted</p>
-            <p class="artist">Berto</p>
+            <p class="artist">Farah's Band</p>
           </div>
         </div>
         <div class="icon-like" onclick="likeunlike()">
@@ -71,26 +80,52 @@
       <div class="progress-controller">
         <div class="slider-container">
           <div class="current-time">00:00</div>
-            <input type="range" min="0" max="100" value="0" class="seek_slider">
+            <input type="range" value="0" class="seek-slider">
           <div class="total-duration">00:00</div>
         </div>
-        <div class="control-buttons">
-          <i class="fas fa-step-backward"></i>
-          <div class="playpause-song" onclick="playpauseTrack()">
-            <i class="fa fa-play-circle fa-2x"></i>
-          </div>
-          <i class="fas fa-step-forward"></i>
-        
+    
+    <div class="control-buttons">
+      <i class="fas fa-step-backward"></i>
+      <div class="playpause-song" onclick="playpauseTrack()">
+        <i class="fa fa-play-circle fa-2x"></i>
       </div>
-      <div class="features">
+      <i class="fas fa-step-forward"></i>
+    </div>
+  </div>
+    <div class="features">
+      <div class="queue-btn">
         <i class="fa fa-bars"></i>
+      </div>
+      <div class="share-btn" onclick="shareTab()">
         <i class="fa fa-share-alt"></i>
-        <div class="volume-bar">
-          <div class="volume-btn" onclick="muteunmute()">
-            <i class="fas fa-volume-down"></i>
+      </div>
+      <div class="share-popup">
+        <header>
+          <span>Share</span>
+          <div class="close-share"><i class="fas fa-times"></i></div>
+        </header>
+        <div class="share-content">
+          <p>Share this link via</p>
+          <ul class="share-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+          </ul>
+          <p>or copy link</p>
+          <div class="share-field">
+            <i class="uil uil-link"></i>
+            <input type="text" value="Ratune.com/share-link">
+            <button>Copy</button>
           </div>
-          <div class="progress-bar">
-            <div class="progress"></div>
+        </div>
+      </div>
+      <div class="volume-bar">
+        <div class="volume-btn" onclick="muteunmute()">
+          <i class="fas fa-volume-down"></i>
+        </div>
+        <div class="progress-bar">
+          <input type="range" value="0" class="volume-bar">
         </div>
       </div>
     </div>
