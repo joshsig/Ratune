@@ -26,6 +26,11 @@
     color: var(--green-color);
 }   
 
+.playlist-item a {
+    position: absolute;
+    z-index: -1;
+}
+
 .playlist-divider {
     width: 90%;
     background-color: rgba(255,255,255,0.4);
