@@ -35,19 +35,19 @@ let track_list = [
     name: "Thinkin Bout You",
     artist: "Frank Ocean",
     image: "https://upload.wikimedia.org/wikipedia/en/2/28/Channel_ORANGE.jpg",
-    song: "songs/ThinkinBoutYou.mp3"
+    song: "./songs/ThinkinBoutYou.mp3"
   },
   {
     name: "Salad Days",
     artist: "Mac Demarco",
     image: "https://upload.wikimedia.org/wikipedia/en/8/81/MacDeMarcoSaladDays.png",
-    song: "songs/SaladDays.mp3"
+    song: "./songs/SaladDays.mp3"
   },
   {
     name: "Dark Red",
     artist: "Steve Lacy",
     image: "https://thefader-res.cloudinary.com/private_images/w_760,c_limit,f_auto,q_auto:best/Screen_Shot_2017-02-20_at_12.25.56_PM_u0wced/steve-lacy-dark-red-single-steve-lacys-demo-the-internet.jpg",
-    song: "songs/DarkRed.mp3"
+    song: "./songs/DarkRed.mp3"
   }
 ]
 

@@ -46,7 +46,7 @@ body {
 
 nav {
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     top: 0;
     bottom: 0;
     overflow: hidden;
@@ -148,7 +148,7 @@ nav {
     justify-content: center;
     align-items: center;
     position: fixed;
-
+    z-index: 12;
     bottom: 0;
     width: 100%;
     padding: var(--padding);
@@ -289,6 +289,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .features{
     position: absolute;
+    z-index: 100;
     right: var(--padding);
     display: flex;
     flex-direction: row;
@@ -296,6 +297,11 @@ input[type=range]::-webkit-slider-thumb {
     margin: 20px;
     align-items: center;
 }
+
+.share-btn, .queue-btn {
+    z-index: inherit;
+}
+
 .volume-bar{
     display: flex;
     align-items: center;
