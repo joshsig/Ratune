@@ -16,6 +16,7 @@
 .playlist-container  {
     padding: 1rem 0 1rem 100px;
     overflow: hidden;
+    z-index: 3;
 }   
 
 .playlist-container  header{
@@ -27,7 +28,8 @@
 }   
 
 .playlist-item a {
-    position: absolute;
+    display: inherit;
+    height: inherit;
     z-index: -1;
 }
 
@@ -57,12 +59,10 @@
                 transform 0.2s 0s ease-in-out;
 }
 
-.playlist-item a {
-    position: flex;
-}
 
 
 .playlist-cover {
+    z-index: 0;
     width: 100%;
     height: 100%;
     object-fit: fill;
