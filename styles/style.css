@@ -209,10 +209,8 @@ i:hover{
 .title {
     font-weight: bold;
 }
-.icons{
-    display: flex;
-    gap: 1em;
-}
+
+
 .progress-controller{
     width: 100%;
     display: flex;

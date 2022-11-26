@@ -10,9 +10,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="./styles/playlist.css"/>
-    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
   </head>
   <body>
     <!--Sidebar Navigation-->
@@ -78,32 +75,7 @@
       </ul>
     </nav>
 
-    <div class="playlist-modal">
-        <div class="playlist-info-container">
-            <h1>Make Playlist</h1>
-            <div class="playlist-img-select">
-                <input type="file" id="upload" name="playlist-img" onchange="readURL(this)" style="visibility: hidden;" />
-                    <a href="" onclick="document.getElementById('upload').click(); return false;">
-                        <img id="pl-cover" src="https://cdn-icons-png.flaticon.com/512/3388/3388973.png" alt="Select Playlist Image"/>
-                    </a>
-            </div>
-            <input type="text" value="Name Your Playlist!" onfocus="if(this.value == 'Name Your Playlist!') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Name Your Playlist!'; }"class="playlist-title-input"/>  
-        </div>
-        <div class="songs-container">
-            <ul class="playlist-add-song">
-                <li class="add-song">Add Songs!</li>
-                <li class="empty-song">E</li>
-                <li class="empty-song">E</li>
-                <li class="empty-song">E</li>
-                <li class="empty-song">E</li>
-                <li class="empty-song">E</li>
-                <li class="empty-song">E</li>
-                <li class="empty-song">E</li>
-                <li class="empty-song">E</li>
-            </ul>
-        </div>
-        <button class="save-playlist">Save</button>
-    </div>
+
 
     <!-- music player at bottom of screen -->
     <div class="music-player">
@@ -183,7 +155,7 @@
     </div>
     </div>
 
-    <script src="./scripts/music.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="scripts/music.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
