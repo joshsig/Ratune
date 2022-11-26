@@ -17,7 +17,7 @@
       <ul class="sidebar-container">
         <li class="sidebar-button">
           <a href="profile.html" class="icon">
-          <img class="icon" id="pfp" src="image" alt="Berto" />
+          <img class="pfp" src="image"/>
           </a>
           <div class="popper">
             <h4 class="popper-text">Profile</h4>
@@ -65,7 +65,7 @@
         <div class="divider">
         </div>
         <li class="sidebar-button">
-          <a href="index.html" class="icon">
+          <a href="main.html" class="icon">
             <img class="icon" src="imgs/home.png" alt="Likes" />
           </a>
           <div class="popper">
@@ -76,22 +76,45 @@
     </nav>
 
     <!-- Feed -->
-    <div class="post-block">
-      <div class="timeline-postList-post">
+    <ul class="timeline">
+      <li class="post-block">
+        <div class="timeline-createPost">
+          <div class="profile-pic">
+            <a href="profile.html" class="icon">
+              <img class="pfp" src="image"/>
+            </a>
+          </div>
+          <div class="caption">
+            <input type="text" value="What's Up" onfocus="if(this.value == 'What\'s Up') { this.value = ''; }" onblur="if(this.value == '') { this.value='What\'s Up'; }"/>
+          </div>
+          <div class="select-song">select song</div>
+          <div class="share">Share</div>
+        </div>
+      </li>
+      <li class="post-block">
         <div class="timeline-post">
           <div class="post-info">
-            <div class="timeline-post-image">
-              <img 
-                src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
-                alt="cover"
-              />
-            </div>
             <div class="post-desc">
-              <div class="timeline-post-username">
-                <div class="Icon Icon--username">@username</div>
+              <div class="timeline-post-image">
+                <img 
+                  src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+                  alt="cover"
+                />
               </div>
               <div class="post-title">Song Title</div>
               <div class="post-artist">Artist</div>
+            </div>
+            
+            <div class="post-content">
+              <div class="timeline-post-username">
+                <div class="user-pic">
+                  <a href="profile.html" class="icon">
+                    <img class="pfp" src="image"/>
+                  </a>
+                </div>
+                <div class="username">username</div>
+              </div>
+                
               <div class="post-caption">caption is here</div>
               <div class="timeline-post-actions">
                 <div class="like" onclick="likeunlike()">
@@ -107,18 +130,27 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
+    
 
     <!-- Search Bar -->
-    <div class="right-bar">
-      <div class="search-form">
+    <ul class="right-bar">
+      <li class="search-form">
           <form action="">
               <label for=""><i class="fas fa-search"></i></label>
-              <input type="text" name="" id="" value="Search Twitter">
+              <input type="text" name="" id="" value="Search Ratune">
           </form>
-      </div>
-   </div>
+      </li>
+      <li class="side-block">
+        <div class="friend-status">Friend Status</div>
+      </li>
+
+      <li class="side-block">
+        <div class="suggestions">People You Might Know</div>
+      </li>
+    </ul>
+
 
     <!-- music player at bottom of screen -->
     <div class="music-player">

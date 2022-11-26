@@ -13,7 +13,11 @@ function readURL(input) {
     }
 }
 
-let profilePic = document.getElementById('pfp');
+let profilePic = document.getElementsByClassName("pfp");
+console.log(profilePic);
 let arr = localStorage.getItem('pfp');
-
-profilePic.setAttribute('src',arr); 
+console.log(arr);
+for(var i = 0; i < profilePic; i++) {
+    profilePic[i].src = arr;
+    console.log(profilePic[i].setAttribute('src',arr));
+}

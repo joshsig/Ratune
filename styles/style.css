@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxP.ttf) format('truetype');
+}
+  
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc9.ttf) format('truetype');
+}
 
 :root {
     --primary-color: #8714B1;
@@ -16,7 +29,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: "circular std book", sans-serif;
+    font-family: Roboto;
     margin: 0;
     padding: 0;
 }
@@ -385,39 +398,80 @@ header .close-share {
     justify-content: space-between;
 }
 
-/*
-Added by Jacob
-*/
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxP.ttf) format('truetype');
-}
-  
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc9.ttf) format('truetype');
+.timeline {
+    min-height: 100%;
+    margin-left: 50px;
+    width: 66%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-sizing: border-box;
+    list-style-type: none;
 }
 
 .post-block {
-    margin-left: 80px;
-    width: 64%;
+    position:relative;
+    border-radius: 25px;
+    padding: 20px;
+    height: 20rem;
+    width: 100%;
     background-color: var(--color-grey-dark);
-    
+    margin-left: 40px;
     font: 14px/1.4 Roboto, Helvetica, Arial, Tahoma, sans-serif;
     font-weight: 300;
     color: #fff;
 }
 
-.timeline-postList-post {
-    border-top: 1px solid rgba(15, 70, 100, 0.12);
+
+.timeline-createPost {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
 }
 
-.timeline-postList-post:first-of-type{
-    border-top: none;
+.profile-pic {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+
+.caption {
+    width: 90%;
+    margin-left: 3em;
+    background-color: var(--color-grey-dark);
+    padding: 10px 20px;
+}   
+
+.caption input {
+    position: relative;
+    overflow:hidden;
+    width: 95%;
+    border: 0;
+    background-color: var(--color-grey-dark);
+    color: var(--color-full-white);
+    font-size: 20px;
+}
+
+.select-song {
+    position: relative;
+    top: 50%;
+}
+
+.share {
+    position: relative;
+    width: 5rem;
+    top: 50%;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: #9b64b1;
+    margin-left: 92%;
+    font-weight: bold;
 }
 
 .timeline-post {
@@ -430,7 +484,6 @@ Added by Jacob
     left: var(--padding);
 
     display: flex;
-    align-items: center;
     gap: 1em;
 }
 
@@ -448,23 +501,54 @@ Added by Jacob
 }
 
 .post-desc {
+    position: relative;
+    width: 20%;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
+    overflow: hidden;
     color: var(--color-full-white);
 }
 
 .timeline-post-username {
-    margin-left: 650px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-left: 84%;
+}
+
+.user-pic {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.username {
+    font-size: 16px;
+    color: var(--color-full-white);
 }
 
 .post-title {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
+    text-align: center;
 }
 
 .post-artist {
-    font-size:30px;
+    font-size:15px;
+    text-align: center;
+}
+
+.post-content {
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    overflow: hidden;
+    color: var(--color-full-white);
 }
 
 .post-caption {
@@ -473,36 +557,50 @@ Added by Jacob
 
 
 .post-title:hover,
-.post-artist:hover {
+.post-artist:hover,
+.timeline-post-username:hover {
     text-decoration: underline;
     color: var(--primary-color);
     cursor: pointer;
 }
 
 .timeline-post-actions {
-    margin-left: 650px;
+    position: relative;
+    top: 70%;
+    margin-left: 89%;
     display: flex;
     gap:1em;
     flex-direction: row;
+    overflow: hidden;
 }
 
 /******Right Side******/
 
 .right-bar {
+    --padding: 1em;
     width: 30%;
-    top: 0;
-    padding: 10px 5px;
+    min-height: 100%;
+    padding: var(--padding);
     right: 5px;
     position: absolute;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #303030;
+    list-style-type: none;
 }
   
 .search-form {
+    top: 0;
     background-color: var(--color-grey-dark);
     padding: 10px 20px;
     border-radius: 20px;
 }
   
 .search-form input {
+    overflow:hidden;
+    width: 95%;
     border: 0;
     background-color: var(--color-grey-dark);
     color: var(--color-full-white);
@@ -511,4 +609,23 @@ Added by Jacob
   
 .search-form i {
     color: var(--color-full-white);
+}
+
+.side-block {
+    position:relative;
+    border-radius: 25px;
+    padding: 20px;
+    height: 20rem;
+    width: 100%;
+    background-color: var(--color-grey-dark);
+    
+    font: 14px/1.4 Roboto, Helvetica, Arial, Tahoma, sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+.friend-status,
+.suggestions {
+    text-align: center;
+    font-size: medium;
 }
