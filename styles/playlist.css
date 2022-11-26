@@ -17,6 +17,7 @@
     padding: 1rem 0 1rem 100px;
     overflow: hidden;
     z-index: 3;
+    margin-bottom: 100px;
 }   
 
 .playlist-container  header{
@@ -45,7 +46,25 @@
     flex-direction: row;
     gap: 4vw;
     padding-top: 1vh;
+    margin-bottom: 20px;
 }
+
+ul.playlists {
+    margin: 0;
+    padding: 40px;
+    z-index: 0;
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+ul.playlists li {
+    display: inline;
+    z-index: 1;
+    width: 50vw;
+    height: 30vh;
+} 
 
 .playlist-item {
     list-style: none;
@@ -53,16 +72,23 @@
     width: 30vw;
     aspect-ratio: 1;
     background-color: #FFF;
-    
+    z-index: 9;
     transition: top 0s 0s ease-in-out,
                 opacity 0.2s 0s ease-in-out,
                 transform 0.2s 0s ease-in-out;
 }
 
+.playlist-add {
+    list-style: none;
+    height: 15vw;
+    width: 30vw;
+    aspect-ratio: 1;
+    background-color: #000000;
+}
 
 
 .playlist-cover {
-    z-index: 0;
+    z-index: 4;
     width: 100%;
     height: 100%;
     object-fit: fill;
