@@ -51,7 +51,7 @@ function validatePass(){
 }
 function login(){
 	if(validateAccount()){
-		location.assign("./main_Page.html");
+		location.assign("./main.html");
 	}
 }
 

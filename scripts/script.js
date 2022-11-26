@@ -12,3 +12,8 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+let profilePic = document.getElementById('pfp');
+let arr = localStorage.getItem('pfp');
+
+profilePic.setAttribute('src',arr); 
