@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="./styles/resetPage.css" />
+    <link rel="stylesheet" href="./styles/index_bgEffect.css" />
+  </head>
+  <body>
+    <div id="limiter" class="limiter">
+      <div id="container_Reset" class="container_Reset">
+        <div id="wrap_Reset" class="wrap_Reset">
+          <a class="back_Button" href="./html/index.html"
+            ><img src="./imgs/back.png" title="Login Page"
+          /></a>
+          <div id="logo" class="logo">
+            <img src="" />
+          </div>
+          <form id="input_Area" class="input_Area">
+            <span class="title">Reset Section</span>
+            <div id="email_Input" class="email_Input">
+              <input
+                id="email_ID"
+                class="email_ID"
+                type="text"
+                name="email"
+                placeholder="Email"
+              />
+              <span class="symbol">
+                <i class="email_Logo" aria-hidden="true">
+                  <img src="./imgs/mail_Logo.png" />
+                </i>
+              </span>
+            </div>
+            <div class="warningMsg">
+              <span id="email_Empty">Email cannot be empty.</span>
+              <span id="email_Format_Error">Email format incorrect.</span>
+            </div>
+            <div id="Confirmation" class="Confirmation">
+              <button
+                id="confrm_Button"
+                class="confrm_Button"
+                type="button"
+                onclick="validateResetInput()"
+              >
+                Reset Password
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <script src="./script/resetPage.js"></script>
+  </body>
+</html>

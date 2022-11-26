@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a new Account</title>
+    <link rel="stylesheet" href="./styles/index_bgEffect.css" />
+    <link rel="stylesheet" href="./styles/registerPage.css" />
+  </head>
+  <body>
+    <div class="limiter">
+      <div id="container_Register" class="container_Register">
+        <div id="wrap_Register" class="wrap_Register">
+          <a class="back_Button" href="./html/index.html"
+            ><img src="./imgs/back.png" title="Login Page"
+          /></a>
+          <form id="input_Area" class="input_Area">
+            <span class="title">Register</span>
+            <div id="email_Input" class="email_Input">
+              <input
+                id="email_ID"
+                class="email_ID"
+                type="text"
+                name="email"
+                placeholder="Email"
+              />
+              <span class="symbol">
+                <i class="email_Logo" aria-hidden="true">
+                  <img src="./imgs/mail_Logo.png" />
+                </i>
+              </span>
+            </div>
+            <div id="name_Input" class="name_Input">
+              <input
+                id="name_ID"
+                class="name_ID"
+                type="text"
+                name="name"
+                placeholder="Name"
+              />
+              <span class="symbol">
+                <i class="name_Logo" aria-hidden="true">
+                  <img src="./imgs/name_Logo.png" />
+                </i>
+              </span>
+            </div>
+            <div id="password_Input" class="password_Input">
+              <input
+                id="password_ID"
+                class="password_ID"
+                type="text"
+                name="password"
+                placeholder="Password"
+              />
+              <span class="symbol">
+                <i class="password_Logo" aria-hidden="true">
+                  <img src="./imgs/password_Logo.png" />
+                </i>
+              </span>
+            </div>
+            <div id="re_Password_Input" class="re_Password_Input">
+              <input
+                id="re_Password_ID"
+                class="re_Password_ID"
+                type="text"
+                name="rePassword"
+                placeholder="Confirmation Password"
+              />
+              <span class="symbol">
+                <i class="re_Password_Logo" aria-hidden="true">
+                  <img src="./imgs/re_Password_Logo.png" />
+                </i>
+              </span>
+            </div>
+            <div class="warningMsg">
+              <span id="email_Empty">Email cannot be empty.</span>
+              <span id="email_Format_Error">Email format incorrect.</span>
+              <span id="name_Empty">Name cannot be empty.</span>
+              <span id="pass_Empty">Password cannot be empty.</span>
+              <span id="repass_Empty"
+                >Confirmation Password cannot be empty.</span
+              >
+              <span id="diffPass">The confirmation password is incorrect.</span>
+            </div>
+          </form>
+          <div id="upload_Image" class="upload_Image">
+            <div id="preview_Image" class="preview_Image">
+              <img src="./imgs/boy.png" id="image" />
+            </div>
+            <label for="profile_Pic">Upload Image</label>
+            <input
+              id="profile_Pic"
+              class="profile_Pic"
+              accept="image/*"
+              onchange="showPreview(event);"
+              type="file"
+            />
+            <div id="finish_Create" class="finish_Create">
+              <button
+                id="confirmation"
+                onclick="validateRegisterInput()"
+                class="confirmation"
+              >
+                Create Account
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <script src="./scripts/registerPage.js"></script>
+  </body>
+</html>

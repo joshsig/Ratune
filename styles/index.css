@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.limiter{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    z-index: 1;
+}
+.limiter .container_SignIn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+} 
+.limiter .container_SignIn .wrap_SignIn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%;
+    min-width: 800px;
+    max-width: 1200px;  
+    min-height: 550px;
+    max-height: 1080px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: black;
+    padding: 50px 50px 50px 50px;
+}
+.limiter .container_SignIn .wrap_SignIn .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+}
+.limiter .container_SignIn .wrap_SignIn .logo .web_Logo{
+    /*Add parameter to image*/
+    height: 50%;
+    width: 80%;
+}
+.limiter .container_SignIn .wrap_SignIn .logo .icon{
+    /*Add parameter to image*/
+    height: 40%;
+    width: 50%;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area{
+    display: block;
+    height: 100%;
+    width: 45%;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .title{
+    display: block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 40px;
+    height: 40px;
+    width: 100%;
+    color: white;
+    margin-bottom: 15%;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .email_Input{
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 5%;
+    cursor: text;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .password_Input{
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 2%;
+    cursor: text;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .symbol{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    padding-right: 75%;
+    transition: all 0.4s;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .symbol i{
+    display: inline-block;
+    height: 50%;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area input{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    color: black;
+    background: rgba(217, 210, 210, 0.582);
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0px 30px 0px 68px;
+    transition: all 0.4s;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .warningMsg{
+    text-align: center;
+    color: red;
+    display: block;
+    font-size: 15px;
+    height: 35px;
+    width: 100%;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .warningMsg #email_Empty{
+    display: none;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .warningMsg #email_Format_Error{
+    display: none;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .warningMsg #pass_Empty{
+    display: none;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .warningMsg #incorrect_Email_Pass{
+    display: none;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .login{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 1%;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .login button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    background: purple;
+    width: 90%;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px;
+    transition: all 0.4s;
+    outline: none !important;
+    cursor: pointer;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .login button:hover{
+    background: rgb(108, 240, 108);
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area input:hover{
+    transform: scale(1.2);
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area input:focus{
+    transform: scale(1.2);
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area input:hover+.symbol{
+    padding-right: 90%;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area input:focus+.symbol{
+    padding-right: 90%;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .avoid_Error{
+    text-align: center !important;
+    display: block;
+    height: 25px;
+    margin-bottom: 90px;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .avoid_Error .forgot_Txt{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    color: white;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .avoid_Error .reset_Password{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: white;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .create_Account{
+    text-align: center !important;
+    height: 25px;
+}
+.limiter .container_SignIn .wrap_SignIn .input_Area .create_Account .new_Account{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    color: white;
+}
+::placeholder{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.4);
+}
