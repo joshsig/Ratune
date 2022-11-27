@@ -37,13 +37,33 @@ function logout(){
 let array_acc=JSON.parse(localStorage.getItem("thisAcc"));
 let name=array_acc[0];
 let pic=array_acc[3];
-let profilePic = document.getElementById('pfp');
+let profilePic = document.getElementsByClassName('pfp');
+let dp = document.getElementsByClassName('account-dp');
+let icon = document.getElementById('pfp');
+
 
 if(pic==999){
-    profilePic.src="./imgs/boy.png";
-    console.log(profilePic.src);
+    for (let index = 0; index < profilePic.length; index++) {
+        const element = profilePic[index];
+        element.src="./imgs/boy.png";
+    }
+    for (let index = 0; index < dp.length; index++) {
+        const element = dp[index];
+        element.src= "./imgs/boy.png";
+    }
+    icon.src = "./imgs/boy.png"; 
 }else{
-    profilePic.setAttribute('src',pic); 
+     for (let index = 0; index < profilePic.length; index++) {
+         const element = profilePic[index];
+        element.setAttribute('src',pic);
+        
+    }
+    for (let index = 0; index < dp.length; index++) {
+        const element = dp[index];
+        element.setAttribute('src',pic);
+        
+    }
+    icon.setAttribute('src',pic); 
 }
 
 function nye() {
