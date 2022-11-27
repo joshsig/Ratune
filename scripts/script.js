@@ -1,3 +1,7 @@
+function setting(){
+    confirm("We are sorry.\nThis feature is under maintenance.\nIf you have any issues, you are welcome to contact us by sending email to -> sigurd35@myumanitoba.ca <-\nThank you so much.");
+}
+
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -11,15 +15,19 @@ function readURL(input) {
     }
 }
 
+function logout(){
+    localStorage.removeItem("array_music");
+    location.assign("./index.html");
+}
+
+let array_acc=JSON.parse(localStorage.getItem("thisAcc"));
+let name=array_acc[0];
+let pic=array_acc[3];
 let profilePic = document.getElementById('pfp');
-let arr = localStorage.getItem('pfp');
-
-profilePic.setAttribute('src',arr); 
-
-let profile_img = document.getElementsByClassName('pfp');
-
-for (let index = 0; index < profile_img.length; index++) {
-    profile_img[index].setAttribute('src', arr);
+if(pic==999){
+    profilePic.src="./imgs/boy.png";
+}else{
+    profilePic.setAttribute('src',pic); 
 }
 
 function nye() {
