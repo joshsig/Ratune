@@ -16,7 +16,7 @@
     <ul class="sidebar-container">
       <li class="sidebar-button">
         <a href="profile.html" class="icon" onclick="saveProgress()">
-          <img class="icon" id="pfp" src="image" />
+        <img class="icon" id="pfp" src="image" />
         </a>
         <div class="popper">
           <h4 class="popper-text">Profile</h4>
@@ -41,25 +41,43 @@
       </li>
       <li class="sidebar-button">
         <a href="explore.html" class="icon" onclick="saveProgress()">
-          <img class="icon" src="./imgs/explore.jpg" alt="Explore" />
+        <img class="icon" src="./imgs/explore.jpg" alt="Explore" />
         </a>
         <div class="popper">
           <h4 class="popper-text">Explore</h4>
         </div>
       </li>
       <li class="sidebar-button">
-        <img class="icon" src="./imgs/post.jpg" alt="Likes" />
+        <img class="icon" src="./imgs/post.jpg" onclick="toggleModal()"alt="Likes" />
         <div class="popper">
           <h4 class="popper-text">Create a Post!</h4>
         </div>
       </li>
+      <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="profile-pic">
+                <img src="./imgs/boy.png" alt="profile picture">
+            </div>
+            <div class ="typewriter">
+                <h1>What's up?</h1>
+            </div>
+            <div class ="caption">
+            <textarea id="textar" name="text" maxlength="140" placeholder="type here"></textarea>
+            </div>
+            <div class="box">
+                <img src="./imgs/plus-grad.png" alt="image">
+            </div>
+            <button class="button shareButton"> share</button>
+        </div>
+      </div>
       <div class="divider">
       </div>
       <li class="sidebar-button">
         <a href="main.html" class="icon" onclick="saveProgress()">
           <img class="icon" src="./imgs/home.png" alt="Return to main page" />
         </a>
-        <div class="popper">curr
+        <div class="popper">
           <h4 class="popper-text">Home</h4>
       </li>
       </div>
@@ -408,9 +426,11 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="scripts/music.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="./scripts/music.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/share.js"></script>
 </body>
 
 </html>

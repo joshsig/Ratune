@@ -49,11 +49,29 @@
           </div>
         </li>
         <li class="sidebar-button">
-          <img class="icon" src="./imgs/post.jpg" alt="Likes" />
+          <img class="icon" src="./imgs/post.jpg" onclick="toggleModal()"alt="Likes" />
           <div class="popper">
             <h4 class="popper-text">Create a Post!</h4>
           </div>
         </li>
+        <div class="modal">
+          <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <div class="profile-pic">
+                  <img src="./imgs/boy.png" alt="profile picture">
+              </div>
+              <div class ="typewriter">
+                  <h1>What's up?</h1>
+              </div>
+              <div class ="caption">
+              <textarea id="textar" name="text" maxlength="140" placeholder="type here"></textarea>
+              </div>
+              <div class="box">
+                  <img src="./imgs/plus-grad.png" alt="image">
+              </div>
+              <button class="button shareButton"> share</button>
+          </div>
+        </div>
         <div class="divider">
         </div>
         <li class="sidebar-button">
@@ -71,16 +89,25 @@
       <ul class="timeline">
         <li class="create-post-block">
           <div class="timeline-createPost">
-            <div class="profile-pic">
-              <a href="profile.html" class="icon">
-                <img class="pfp" src="image"/>
-              </a>
+            <div class="profile-top">
+              <div class="profile-pic">
+                <a href="profile.html" class="icon">
+                  <img class="pfp" src="image"/>
+                </a>
+              </div>
+              <div class="everyone">Everyone can see</div>
             </div>
             <div class="caption">
               <input type="text" value="What's Up" onfocus="if(this.value == 'What\'s Up') { this.value = ''; }" onblur="if(this.value == '') { this.value='What\'s Up'; }"/>
             </div>
-            <div class="select-song">select song</div>
-            <button class="share" onclick="nye()">Share</button>
+            <div class="post-divider"></div>
+            <div class="add-song">
+              <div class="add">
+                <i class="fas fa-plus-circle"> </i>
+              </div>
+              <div class="select-song">select song/artist/playlist</div>
+              <button class="share" onclick="nye()">Share</button>
+            </div>
           </div>
         </li>
         <li class="post-block">
@@ -406,5 +433,6 @@
 
     <script src="scripts/music.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/share.js"></script>
   </body>
 </html>

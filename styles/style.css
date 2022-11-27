@@ -474,10 +474,27 @@ header .close-share {
 
 }
 
+.profile-top {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
 .profile-pic {
     height: 48px;
     width: 48px;
     border-radius: 50%;
+}
+
+.everyone {
+    border-radius: 10px;
+    padding: 5px;
+    border-color: var(--color-full-white);
+    border-style: solid;
+    border-width: 2px;
+    opacity: 50%;
+    font-size: 15px;
 }
 
 .caption {
@@ -497,21 +514,52 @@ header .close-share {
     font-size: 20px;
 }
 
-.select-song {
+
+.post-divider {
+    top:20%;
+    position:relative;
+    width: 92%;
+    margin-left: 4em;
+    background-color: var(--color-full-white);
+    height: 2px;
+    border-radius: 2px;
+    opacity: 50%;
+}
+
+
+.add-song {
+    height: 40px;
+    width: 100%;
+    align-items: center;
     position: relative;
+    display: flex;
+    flex-direction: row;
     top: 30%;
 }
 
+.add {
+    font-size: 35px;
+}
+
+.select-song {
+    opacity: 50%;
+    margin-left: 8px;
+    width: 100%;
+    font-size: 15px;
+}
+
 .share {
-    position: relative;
-    width: 5rem;
-    top: 20%;
-    border-radius: 10px;
-    padding: 5px;
+    width: 20%;
+    height: 100%;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px;
     text-align: center;
-    background-color: #9b64b1;
-    margin-left: 90%;
+    background-color: var(--primary-color);
+    margin-left: 30%;
+    font-size:16px;
     font-weight: bold;
+    color: var(--color-full-white);
     cursor: pointer;
 }
 
@@ -607,7 +655,7 @@ header .close-share {
 
 .timeline-post-actions {
     position: relative;
-    top: 70%;
+    top: 80%;
     margin-left: 89%;
     display: flex;
     gap:1em;
@@ -901,3 +949,171 @@ header .close-share {
     color: goldenrod;
 }
 
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-grey-dark);
+    padding: 1rem 1.5rem;
+    width: 40rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: var(--green-hover-color);
+}
+
+.close-button:hover {
+    background-color:  var(--green-color);  
+    ;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 510px;
+    top: 80%;
+  }
+.shareButton{
+  background-color: var(--green-hover-color); 
+  color: black; 
+  border: 2px solid #301934;
+ 
+
+}
+.shareButton:hover {
+    background-color:var(--green-color);
+    color: white;
+  }
+  
+  
+  .typewriter {
+    /* padding-top: 2em; */
+    
+    display: flex;
+    justify-content: center;
+    position:absolute; 
+    left:80px; 
+    top:15px
+    
+  } 
+  
+  /* DEMO-SPECIFIC STYLES */
+   .typewriter h1 {
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid purple; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    position: relative;
+    top: 2px;
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  } 
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(99, 56, 161) }
+  }
+  .search-bar input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  .search-bar input[type=text] {
+    border: 1px solid #ccc;
+  }
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    clip-path: circle();
+  }
+
+  .box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position:absolute; 
+    top:80px;
+    cursor: pointer;
+  }
+  .box :hover{
+    background-color: #dbcbdd;
+    opacity: 0.5;
+    border-radius: 50%;
+    color: white;
+    
+  }
+    .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+    #textar{
+        margin: 10px 0px 20px 45px;
+        width: 60%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 1px solid rgb(12, 10, 10);
+        border-radius: 4px;
+        background-color: #45494e;
+        font-size: 16px;
+        position : relative;
+        left: 150px;
+        top: 0px;
+
+    }
