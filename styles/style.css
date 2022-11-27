@@ -411,6 +411,21 @@ header .close-share {
 
 .timeline {
     min-height: 100%;
+
+    margin-left: 50px;
+    margin-bottom: 140px;
+    width: 66%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.profile-timeline {
+    min-height: 100%;
+    margin-top: 320px;
     margin-left: 50px;
     margin-bottom: 140px;
     width: 66%;
@@ -426,7 +441,7 @@ header .close-share {
     position:relative;
     border-radius: 25px;
     padding: 20px;
-    height: 20rem;
+    height: 18rem;
     width: 100%;
     background-color: var(--color-grey-dark);
     margin-left: 40px;
@@ -529,7 +544,7 @@ header .close-share {
     width: 20%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     overflow: hidden;
     color: var(--color-full-white);
 }
@@ -557,12 +572,12 @@ header .close-share {
 .post-title {
     font-size: 30px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 .post-artist {
     font-size:15px;
-    text-align: center;
+    text-align: left;
 }
 
 .post-content {
@@ -576,7 +591,9 @@ header .close-share {
 }
 
 .post-caption {
-    font-size:20px;
+    font-size:30px;
+    position: absolute;
+
 }
 
 
@@ -836,4 +853,48 @@ header .close-share {
     background-color: white;
     opacity: 1;
     outline: none;
+}
+.user-account {
+    background-color: var(--color-grey-dark);
+    min-height: 25%;
+    margin-left: 90px;
+    margin-bottom: 140px;
+    margin-top: 10px;
+    max-block-size: inherit;
+    width: 66%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-sizing: border-box;
+    list-style-type: none;
+    justify-content: space-between;
+    border-radius: 25px;
+
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    color: #CD5C5C;
+    font: italic 30px "Fira Sans", serif;
+}
+
+.profile-info h3 {
+    margin-left: 10%;
+}
+
+.account-dp {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.tab{
+    
+    position: absolute;
+    margin-top:270px;
+    margin-left:100px;
+
+    font-size: 35px;
+    color: goldenrod;
 }
