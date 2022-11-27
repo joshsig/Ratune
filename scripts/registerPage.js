@@ -1,4 +1,7 @@
-let email, nameID, password, image, acc=[], array_acc=[];
+let email, nameID, password, image, acc=[], array_acc=[], uploadedImage=false;
+
+image=document.getElementById("image");
+image.src="./imgs/boy.png";
 
 if(localStorage.getItem("acc")!=null){
     array_acc=JSON.parse(localStorage.getItem("acc"));
@@ -93,9 +96,11 @@ function register(){
     email=document.getElementById("email_ID").value;
     nameID=document.getElementById("name_ID").value;
     password=document.getElementById("password_ID").value;
-    image=document.getElementById("image");
-    console.log(image);
 
+    if(!uploadedImage){
+        image=999;
+    }
+    
     acc=[email, nameID, password, image];
     array_acc.push(acc);
     localStorage.setItem("acc", JSON.stringify(array_acc));
@@ -105,17 +110,18 @@ function register(){
 function showPreview(event){
     if(event.target.files.length >0){
         var src=URL.createObjectURL(event.target.files[0]);
+
         const reader = new FileReader();
         reader.readAsDataURL(event.target.files[0]);
-
         reader.addEventListener('load', () => {
-            localStorage.setItem('pfp', reader.result);
-        });
+            image=reader.result;
+            });
 
-        image=document.getElementById("image");
-        image.src=src;
-        image.style.display="block";
+        previewImage=document.getElementById("image");
+        previewImage.src=src;
+        previewImage.style.display="block";
         document.getElementById("preview_Image").style.background="transparent";
         document.getElementById("preview_Image").style.border="none";
+        uploadedImage=true;
     }
 }
