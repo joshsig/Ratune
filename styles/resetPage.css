@@ -85,7 +85,7 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    padding-right: 75%;
+    padding-right: 80%;
     transition: all 0.4s;
 }
 .limiter .container_Reset .wrap_Reset .input_Area .symbol i{
@@ -127,10 +127,10 @@
     transform: scale(1.2);
 }
 .limiter .container_Reset .wrap_Reset .input_Area input:hover+.symbol{
-    padding-right: 90%;
+    padding-right: 100%;
 }
 .limiter .container_Reset .wrap_Reset .input_Area input:focus+.symbol{
-    padding-right: 90%;
+    padding-right: 100%;
 }
 ::placeholder{
     font-size: 20px;
