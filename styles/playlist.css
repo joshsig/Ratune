@@ -20,6 +20,10 @@
     margin-bottom: 100px;
 }   
 
+.playlist-container.blur {
+    filter: blur(10px);
+}
+
 .playlist-container  header{
     position: flex;
     padding-top: 1vh;
@@ -63,7 +67,6 @@ ul.playlists {
 ul.playlists li {
     display: inline;
     z-index: 1;
-    width: 50vw;
     height: 30vh;
 } 
 
@@ -71,6 +74,7 @@ ul.playlists li {
     list-style: none;
     height: 15vw;
     width: 30vw;
+    max-width: 20vw;
     aspect-ratio: 1;
     background-color: #FFF;
     z-index: 9;
@@ -81,10 +85,10 @@ ul.playlists li {
 
 .playlist-add {
     list-style: none;
-    height: 15vw;
-    width: 30vw;
+    max-width: 30vw;
     aspect-ratio: 1;
     background-color: #000000;
+    cursor: pointer;
 }
 
 
@@ -129,15 +133,24 @@ ul.playlists li {
 }
 
 .playlist-modal {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    align-items: center;
-    justify-items: center;
+    -webkit-box-shadow: 0px 0px 20px 8px rgba(255,255,255,0.72); 
+    box-shadow: 0px 0px 20px 8px rgba(255,255,255,0.72);
     transform: translate(-50%, -70%);
-    background-color: #45494e;
-    border-radius: 25%;
+    background-color: #303030;
+    border-radius: 10%;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0%;
     padding: 1vw 4vw 1vw 4vw;
+}
+
+.playlist-modal.show {
+    visibility: visible;
+    opacity: 100%;
+    z-index: 100;
 }
 
 .playlist-info-container {
@@ -146,10 +159,16 @@ ul.playlists li {
     padding: 20px;
 }
 
+.playlist-info-container h1 {
+    margin-left: 1.3vw;
+    color: var(--green-color)
+}
+
 .playlist-img-select {
     width: 10vw;
     height: 10vw;
     margin-bottom: 20px;
+    margin-left: 1.3vw;
 }
 
 .playlist-img-select img {
@@ -160,20 +179,22 @@ ul.playlists li {
 
 .playlist-title-input {
     margin-top: 20px;
+    margin-left: 1.3vw;
 }
 
 .song-container {
     max-height: 4vh;
+    border-radius: 10%;
+    margin-top: 20px;
 }
 
 .playlist-add-song {
     overflow: hidden;
     overflow-y: scroll;
-    background-color: #000000;
+    background-color: #303030;
     padding: 20px;
     color: var(--color-full-white);
-    transition: all 0.3s ease-in-out;
-    max-height: 12vh;
+    max-height: 14vh;
     width: 15vw;
     margin-bottom: 20px;
 }
@@ -182,4 +203,20 @@ ul.playlists li {
     list-style-type: none;
     padding: 10px;
     gap: 10px;
+}
+
+.save-playlist {
+    font-family: Roboto, sans-serif;
+    font-weight: 460;
+    font-size: 14px;
+    color: #fff;
+    background-color: #6a1ba8;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    transition : 1ms;
+    transform: translateY(0);
+    align-items: center;
+    cursor: pointer;
+    margin-left: 70px;
 }

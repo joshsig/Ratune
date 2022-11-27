@@ -85,7 +85,7 @@
      
       <ul class="playlists">
         <li class="playlist-add">
-          
+            <img class="playlist-cover" src="./imgs/plus-grad.png"/>
         </li>
         <li class="playlist-item">
           <a href="#">
@@ -195,7 +195,35 @@
     </li>
   </ul>
 
-  </div>
+    </div>
+
+    <div class="playlist-modal">
+        <div class="playlist-info-container">
+            <h1>Make Playlist</h1>
+            <div class="playlist-img-select">
+                <input type="file" id="upload" name="playlist-img" onchange="readURL(this)" style="visibility: hidden;" />
+                    <a href="" onclick="document.getElementById('upload').click(); return false;">
+                        <img id="pl-cover" src="https://cdn-icons-png.flaticon.com/512/3388/3388973.png" alt="Select Playlist Image"/>
+                    </a>
+            </div>
+            <input type="text" value="Name Your Playlist!" onfocus="if(this.value == 'Name Your Playlist!') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Name Your Playlist!'; }"class="playlist-title-input"/>  
+        </div>
+        <div class="songs-container">
+          <div class="divider"></div>
+            <ul class="playlist-add-song">
+                <li class="add-song">Add Songs!</li>
+                <li class="empty-song">E</li>
+                <li class="empty-song">E</li>
+                <li class="empty-song">E</li>
+                <li class="empty-song">E</li>
+                <li class="empty-song">E</li>
+                <li class="empty-song">E</li>
+                <li class="empty-song">E</li>
+                <li class="empty-song">E</li>
+            </ul>
+        </div>
+        <button class="save-playlist">Save</button>
+    </div>
 
     <div class="music-player">
       <div class="song-bar">
@@ -276,5 +304,6 @@
     
     <script src="./scripts/music.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/playlist.js"></script>
   </body>
 </html>

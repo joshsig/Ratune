@@ -55,6 +55,7 @@ body {
     font-size: 14px;
 }
 
+
 nav {
     position: fixed;
     z-index: 10;
@@ -108,6 +109,12 @@ nav {
 }
 
 .icon {
+    width: inherit;
+    aspect-ratio: 1;
+    border-radius: inherit;
+}
+
+.pfp {
     width: inherit;
     aspect-ratio: 1;
     border-radius: inherit;
@@ -398,9 +405,14 @@ header .close-share {
     justify-content: space-between;
 }
 
+.timeline-wrapper {
+    
+}
+
 .timeline {
     min-height: 100%;
     margin-left: 50px;
+    margin-bottom: 140px;
     width: 66%;
     gap: 5px;
     display: flex;
@@ -415,6 +427,19 @@ header .close-share {
     border-radius: 25px;
     padding: 20px;
     height: 20rem;
+    width: 100%;
+    background-color: var(--color-grey-dark);
+    margin-left: 40px;
+    font: 14px/1.4 Roboto, Helvetica, Arial, Tahoma, sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+.create-post-block {
+    position:relative;
+    border-radius: 25px;
+    padding: 20px;
+    height: 15rem;
     width: 100%;
     background-color: var(--color-grey-dark);
     margin-left: 40px;
@@ -459,28 +484,27 @@ header .close-share {
 
 .select-song {
     position: relative;
-    top: 50%;
+    top: 30%;
 }
 
 .share {
     position: relative;
     width: 5rem;
-    top: 50%;
+    top: 20%;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
     background-color: #9b64b1;
-    margin-left: 92%;
+    margin-left: 90%;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .timeline-post {
-    position: relative;
     padding: 10px;
 }
 
 .post-info {
-    position: relative;
     left: var(--padding);
 
     display: flex;
@@ -578,12 +602,12 @@ header .close-share {
 
 .right-bar {
     --padding: 1em;
-    width: 30%;
+    width: 28vw;
     min-height: 100%;
     padding: var(--padding);
     right: 5px;
-    position: absolute;
-    gap: 5px;
+    position: fixed;
+    gap: 8px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -611,7 +635,20 @@ header .close-share {
     color: var(--color-full-white);
 }
 
-.side-block {
+.side-block-friends {
+    position:relative;
+    border-radius: 25px;
+    padding: 20px;
+    height: 30rem;
+    width: 100%;
+    background-color: var(--color-grey-dark);
+    
+    font: 14px/1.4 Roboto, Helvetica, Arial, Tahoma, sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+.side-block-suggestion {
     position:relative;
     border-radius: 25px;
     padding: 20px;

@@ -1,5 +1,3 @@
-
-
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -13,11 +11,18 @@ function readURL(input) {
     }
 }
 
-let profilePic = document.getElementsByClassName("pfp");
-console.log(profilePic);
+let profilePic = document.getElementById('pfp');
 let arr = localStorage.getItem('pfp');
-console.log(arr);
-for(var i = 0; i < profilePic; i++) {
-    profilePic[i].src = arr;
-    console.log(profilePic[i].setAttribute('src',arr));
+
+profilePic.setAttribute('src',arr); 
+
+let profile_img = document.getElementsByClassName('pfp');
+
+for (let index = 0; index < profile_img.length; index++) {
+    profile_img[index].setAttribute('src', arr);
 }
+
+function nye() {
+    console.log("Not Yet Implemented!");
+}
+

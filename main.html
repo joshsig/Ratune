@@ -17,7 +17,7 @@
       <ul class="sidebar-container">
         <li class="sidebar-button">
           <a href="profile.html" class="icon">
-          <img class="pfp" src="image"/>
+          <img class="icon" id="pfp" src="image"/>
           </a>
           <div class="popper">
             <h4 class="popper-text">Profile</h4>
@@ -76,63 +76,144 @@
     </nav>
 
     <!-- Feed -->
-    <ul class="timeline">
-      <li class="post-block">
-        <div class="timeline-createPost">
-          <div class="profile-pic">
-            <a href="profile.html" class="icon">
-              <img class="pfp" src="image"/>
-            </a>
-          </div>
-          <div class="caption">
-            <input type="text" value="What's Up" onfocus="if(this.value == 'What\'s Up') { this.value = ''; }" onblur="if(this.value == '') { this.value='What\'s Up'; }"/>
-          </div>
-          <div class="select-song">select song</div>
-          <div class="share">Share</div>
-        </div>
-      </li>
-      <li class="post-block">
-        <div class="timeline-post">
-          <div class="post-info">
-            <div class="post-desc">
-              <div class="timeline-post-image">
-                <img 
-                  src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
-                  alt="cover"
-                />
-              </div>
-              <div class="post-title">Song Title</div>
-              <div class="post-artist">Artist</div>
+    <div class="timeline-wrapper">
+      <ul class="timeline">
+        <li class="create-post-block">
+          <div class="timeline-createPost">
+            <div class="profile-pic">
+              <a href="profile.html" class="icon">
+                <img class="pfp" src="image"/>
+              </a>
             </div>
-            
-            <div class="post-content">
-              <div class="timeline-post-username">
-                <div class="user-pic">
-                  <a href="profile.html" class="icon">
-                    <img class="pfp" src="image"/>
-                  </a>
+            <div class="caption">
+              <input type="text" value="What's Up" onfocus="if(this.value == 'What\'s Up') { this.value = ''; }" onblur="if(this.value == '') { this.value='What\'s Up'; }"/>
+            </div>
+            <div class="select-song">select song</div>
+            <button class="share" onclick="nye()">Share</button>
+          </div>
+        </li>
+        <li class="post-block">
+          <div class="timeline-post">
+            <div class="post-info">
+              <div class="post-desc">
+                <div class="timeline-post-image">
+                  <img 
+                    src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+                    alt="cover"
+                  />
                 </div>
-                <div class="username">username</div>
+                <div class="post-title">Song Title</div>
+                <div class="post-artist">Artist</div>
               </div>
-                
-              <div class="post-caption">caption is here</div>
-              <div class="timeline-post-actions">
-                <div class="like" onclick="likeunlike()">
-                  <i class="fas fa-heart"></i>
+              
+              <div class="post-content">
+                <div class="timeline-post-username">
+                  <div class="user-pic">
+                    <a href="profile.html" class="icon">
+                      <img class="pfp" src="image"/>
+                    </a>
+                  </div>
+                  <div class="username">username</div>
                 </div>
-                <div class="repost">
-                  <i class="fas fa-sync"></i>
-                </div>
-                <div class="comment">
-                  <i class="fas fa-comment"></i>
+                  
+                <div class="post-caption">caption is here</div>
+                <div class="timeline-post-actions">
+                  <div class="like" onclick="likeunlike()">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="repost">
+                    <i class="fas fa-sync"></i>
+                  </div>
+                  <div class="comment">
+                    <i class="fas fa-comment"></i>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
-    </ul>
-    
+        </li>
+        <li class="post-block">
+          <div class="timeline-post">
+            <div class="post-info">
+              <div class="post-desc">
+                <div class="timeline-post-image">
+                  <img 
+                    src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+                    alt="cover"
+                  />
+                </div>
+                <div class="post-title">Song Title</div>
+                <div class="post-artist">Artist</div>
+              </div>
+              
+              <div class="post-content">
+                <div class="timeline-post-username">
+                  <div class="user-pic">
+                    <a href="profile.html" class="icon">
+                      <img class="pfp" src="image"/>
+                    </a>
+                  </div>
+                  <div class="username">username</div>
+                </div>
+                  
+                <div class="post-caption">caption is here</div>
+                <div class="timeline-post-actions">
+                  <div class="like" onclick="likeunlike()">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="repost">
+                    <i class="fas fa-sync"></i>
+                  </div>
+                  <div class="comment">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="post-block">
+          <div class="timeline-post">
+            <div class="post-info">
+              <div class="post-desc">
+                <div class="timeline-post-image">
+                  <img 
+                    src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+                    alt="cover"
+                  />
+                </div>
+                <div class="post-title">Song Title</div>
+                <div class="post-artist">Artist</div>
+              </div>
+              
+              <div class="post-content">
+                <div class="timeline-post-username">
+                  <div class="user-pic">
+                    <a href="profile.html" class="icon">
+                      <img class="pfp" src="image"/>
+                    </a>
+                  </div>
+                  <div class="username">username</div>
+                </div>
+                  
+                <div class="post-caption">caption is here</div>
+                <div class="timeline-post-actions">
+                  <div class="like" onclick="likeunlike()">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="repost">
+                    <i class="fas fa-sync"></i>
+                  </div>
+                  <div class="comment">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
 
     <!-- Search Bar -->
     <ul class="right-bar">
@@ -142,11 +223,11 @@
               <input type="text" name="" id="" value="Search Ratune">
           </form>
       </li>
-      <li class="side-block">
+      <li class="side-block-friends">
         <div class="friend-status">Friend Status</div>
       </li>
 
-      <li class="side-block">
+      <li class="side-block-suggestion">
         <div class="suggestions">People You Might Know</div>
       </li>
     </ul>
