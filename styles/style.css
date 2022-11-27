@@ -726,12 +726,14 @@ header .close-share {
 }
 
 .friend-user {
-    font-size: large;
+    font-size: 25px;
 }
 
-.curr-song,
+.curr-song{
+    font-size: 20px;
+}
 .curr-artist {
-    font-size: small;
+    font-size: smaller;
 }
 
 .suggestions {
@@ -898,3 +900,4 @@ header .close-share {
     font-size: 35px;
     color: goldenrod;
 }
+
