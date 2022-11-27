@@ -3,6 +3,7 @@ let array_acc=[];
 if(localStorage.getItem("acc")!=null){
     array_acc=JSON.parse(localStorage.getItem("acc"));
 };
+array_acc.push(["admin@admin.ca", "admin", "admin", 999]);
 
 function validateLoginInput(){
 	resetDisplay();
@@ -62,6 +63,7 @@ function validateAccount(){
 
 		for(i in array_acc){
 			if(array_acc[i][0] == email && array_acc[i][2] == pass){
+                localStorage.setItem("thisAcc", JSON.stringify(array_acc[i]));
 				return true;
 			}
 		}
