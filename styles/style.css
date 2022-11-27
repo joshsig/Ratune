@@ -602,7 +602,7 @@ header .close-share {
 
 .right-bar {
     --padding: 1em;
-    width: 28vw;
+    width: 27vw;
     min-height: 100%;
     padding: var(--padding);
     right: 5px;
@@ -614,7 +614,9 @@ header .close-share {
     background-color: #303030;
     list-style-type: none;
 }
-  
+
+
+
 .search-form {
     top: 0;
     background-color: var(--color-grey-dark);
@@ -624,7 +626,7 @@ header .close-share {
   
 .search-form input {
     overflow:hidden;
-    width: 95%;
+    width: 90%;
     border: 0;
     background-color: var(--color-grey-dark);
     color: var(--color-full-white);
@@ -636,19 +638,7 @@ header .close-share {
 }
 
 .side-block-friends {
-    position:relative;
-    border-radius: 25px;
-    padding: 20px;
-    height: 30rem;
-    width: 100%;
-    background-color: var(--color-grey-dark);
-    
-    font: 14px/1.4 Roboto, Helvetica, Arial, Tahoma, sans-serif;
-    font-weight: 300;
-    color: #fff;
-}
-
-.side-block-suggestion {
+    overflow-y:scroll;
     position:relative;
     border-radius: 25px;
     padding: 20px;
@@ -661,8 +651,87 @@ header .close-share {
     color: #fff;
 }
 
+.side-block-friends::-webkit-scrollbar {
+    width: 14px;
+    margin-left: 200px;
+  }
+
+.side-block-friends::-webkit-scrollbar-track {
+    background: var(--color-grey-dark);
+    border-radius: 10px;
+  }
+
+.side-block-friends::-webkit-scrollbar-thumb {
+    background-color: #303030;
+    border-radius: 10px;
+    border: 3px none #7d7d7d;
+    background-clip: padding-box;
+  }
+
+.side-block-suggestion {
+    position:relative;
+    border-radius: 25px;
+    padding: 20px;
+    height: 14.5rem;
+    width: 100%;
+    background-color: var(--color-grey-dark);
+    
+    font: 14px/1.4 Roboto, Helvetica, Arial, Tahoma, sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
 .friend-status,
+.people-you-might {
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+}
+
+.friends {
+    display: flex;
+    flex-direction: column;
+    gap:1.5em;
+    list-style-type: none;
+}
+
+.friend {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+.status {
+    display:flex;
+    flex-direction: column;
+}
+
+.friend-user {
+    font-size: large;
+}
+
+.curr-song,
+.curr-artist {
+    font-size: small;
+}
+
 .suggestions {
+    display: flex;
+    flex-direction: column;
+    gap:1.5em;
+    list-style-type: none;
+}
+
+.suggestion {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.play-image,
+.friend-image {
     text-align: center;
-    font-size: medium;
+    line-height: 35px;
+    font-size: 35px;
 }

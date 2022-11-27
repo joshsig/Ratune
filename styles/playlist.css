@@ -74,7 +74,7 @@ ul.playlists li {
     list-style: none;
     height: 15vw;
     width: 30vw;
-    max-width: 20vw;
+    min-width: 300px;
     aspect-ratio: 1;
     background-color: #FFF;
     z-index: 9;
@@ -86,6 +86,7 @@ ul.playlists li {
 .playlist-add {
     list-style: none;
     max-width: 30vw;
+    min-width: 300px;
     aspect-ratio: 1;
     background-color: #000000;
     cursor: pointer;
@@ -205,6 +206,10 @@ ul.playlists li {
     gap: 10px;
 }
 
+.add-song {
+    cursor: pointer;
+}
+
 .save-playlist {
     font-family: Roboto, sans-serif;
     font-weight: 460;
@@ -219,4 +224,10 @@ ul.playlists li {
     align-items: center;
     cursor: pointer;
     margin-left: 70px;
+}
+
+.playlist-view-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
