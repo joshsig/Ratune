@@ -68,6 +68,64 @@
     </ul>
   </nav>
 
+  <div class="fil_feature_Container">
+
+    <button id="fil_Btn", type="button", onclick="openFilterMenu()", class="fil_Btn">
+        <img src="./imgs/fillter.png" title="Filter">
+    </button>
+
+    <div id="fil_Content" class="fil_Content">
+
+        <div class="gerne_Selection">
+            <label for="gerne">Gerne:<br></label>
+
+            <select name="gerne" id="gerne">
+                <option value="None">- -</option>
+                <option value="pop">Pop</option>
+                <option value="soft">Soft</option>
+                <option value="rock">Rock</option>
+                <option value="jazz">Jazz</option>
+                <option value="dance_Music">Disco</option>
+            </select>
+        </div>
+
+        <div class="time_Selection">
+            <label for="time">Time:<br></label>
+
+            <select name="time" id="time">
+                <option value="1960">- -</option>
+                <option value="1970">1970</option>
+                <option value="1980">1980</option>
+                <option value="1990">1990</option>
+                <option value="2000">2000</option>
+                <option value="2010">2010</option>
+            </select>
+        </div>
+
+        <div id="doneFilter" onclick="closeFilterMenu()">
+            <h3 onclick="startFil()">
+                Done
+            </h3>
+        </div>
+    </div>
+  </div>
+
+  <!--The search feature-->
+  <div class="search_Container">
+        
+    <!--Search bar-->
+    <form id="search_Bar"  onsubmit="search()" class="search_Bar">
+
+        <!--Search bar object-->
+        <input id="input" type="search" placeholder="Search..." onclick="searchDropdown()" target>
+    </form>
+
+    <!--Result-->
+    <div id="search_Result" class="search_Result">
+        <!--recent search or result-->
+    </div>
+</div>
+
   <div earth-img="https://raw.githubusercontent.com/PatelK09/HCI/main/img/Bright%20nightearth.jpg"
     earth-element="container" class="earth-container full-page-globe-container"></div>
   <div class="collection-list-wrapper w-dyn-list">
