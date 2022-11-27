@@ -642,7 +642,7 @@ header .close-share {
     position:relative;
     border-radius: 25px;
     padding: 20px;
-    height: 20rem;
+    height: 55vh;
     width: 100%;
     background-color: var(--color-grey-dark);
     
@@ -672,7 +672,7 @@ header .close-share {
     position:relative;
     border-radius: 25px;
     padding: 20px;
-    height: 14.5rem;
+    height: 26vh;
     width: 100%;
     background-color: var(--color-grey-dark);
     

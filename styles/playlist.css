@@ -129,6 +129,13 @@ ul.playlists li {
     transition: opacity 0.33s 0s ease-in-out;
 }
 
+.playlist-title-input {
+    background-color: #303030;
+    border-style: none;
+    color: var(--color-full-white);
+    font-weight: bold;
+}
+
 .playlist-item:hover .playlist-overlay {
     opacity: 100%;
 }
