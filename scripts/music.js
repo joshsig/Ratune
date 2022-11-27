@@ -192,3 +192,33 @@ function seekUpdate() {
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
 }
+
+/**These three function is to track and resume the music status.
+  ****Not Done Yet****
+  @Josh read comments.
+*/
+function saveProgress(){
+  /**@Josh the 'array_music' is to save all the data you needed for the resume.
+   * @Josh I have built the structure, so you can add the data you need.
+  */
+  var array_music=[isPlaying, muted, track_index];
+
+  /**This will store the array to local storage. */
+  localStorage.setItem("array_music", JSON.stringify(array_music));
+}
+
+/**This will check and get the data from the local storage. */
+if(localStorage.getItem("array_music")!=null){
+  var array_music=JSON.parse(localStorage.getItem("array_music"));
+  loadProgress(array_music); /**Call the next function to resume every data from the array. */
+}
+ /**Assign each data from the array the each variable that is needed for resume the music. */
+function loadProgress(state){
+  isPlaying=!state[0]; /**This is Done. */
+  muted=!state[1]; /**This is Done. */
+  playpauseTrack();
+  muteunmute();
+
+  track_index=state[2]; /**The rest is not done yet. @Josh your turn to complete it. */
+  
+}
