@@ -440,7 +440,7 @@ header .close-share {
 .post-block {
     position:relative;
     border-radius: 25px;
-    padding: 20px;
+    padding: 10px 20px;
     height: 18rem;
     width: 100%;
     background-color: var(--color-grey-dark);
@@ -618,13 +618,13 @@ header .close-share {
 }
 
 .post-title {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-align: left;
 }
 
 .post-artist {
-    font-size:15px;
+    font-size:20px;
     text-align: left;
 }
 
@@ -655,7 +655,7 @@ header .close-share {
 
 .timeline-post-actions {
     position: relative;
-    top: 80%;
+    top: 70%;
     margin-left: 89%;
     display: flex;
     gap:1em;
@@ -774,14 +774,15 @@ header .close-share {
 }
 
 .friend-user {
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .curr-song{
-    font-size: 20px;
+    font-size: 18px;
 }
 .curr-artist {
-    font-size: smaller;
+    font-size: 15px;
 }
 
 .suggestions {
