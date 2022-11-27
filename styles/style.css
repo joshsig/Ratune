@@ -631,6 +631,7 @@ header .close-share {
     background-color: var(--color-grey-dark);
     color: var(--color-full-white);
     font-size: 14px;
+    outline: none;
 }
   
 .search-form i {
@@ -813,11 +814,12 @@ header .close-share {
     height: 50px;
     z-index: inherit;
 }
+
 .search_Container .search_Bar input{
     width: inherit;
     height: inherit;
     background-color: rgba(240, 248, 255, 0.171);
-    color: rgb(210, 71, 223);
+    color: rgb(0, 0, 0);
     font-size: 200%;
     text-align: center;
     padding-inline-start: 5%;
@@ -833,13 +835,5 @@ header .close-share {
 .search_Container .search_Bar input:focus{
     background-color: white;
     opacity: 1;
-}
-.search_Container .search_Result{
-    height: 70px;
-    width: 100%;
-    margin-top: 3%;
-    border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.747);
-    visibility: hidden;
-    z-index: 3;
+    outline: none;
 }
