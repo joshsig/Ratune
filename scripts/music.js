@@ -20,6 +20,7 @@ let total_duration = document.querySelector(".total-duration");
 let isPlaying = false;
 let muted = false;
 let liked = false;
+let startVolume=50/100;
 
 
 let track_index = 0;
@@ -27,8 +28,8 @@ let updateTimer;
 
 let curr_track = document.createElement('audio');
 
-curr_track.volume = 6/100;
-let prev_vol = 6/100;
+curr_track.volume = startVolume;
+let prev_vol = curr_track.volume;
 
 let track_list = [
   {
@@ -167,7 +168,9 @@ function seekTo() {
 }
 
 function setVolume() {
-  curr_track.volume = volume_slider.value / 200;
+  curr_track.volume = volume_slider.value / 100;
+  prev_vol=curr_track.volume;
+  unmute();
 }
 
 function seekUpdate() {
@@ -193,32 +196,26 @@ function seekUpdate() {
   }
 }
 
-/**These three function is to track and resume the music status.
-  ****Not Done Yet****
-  @Josh read comments.
-*/
-function saveProgress(){
-  /**@Josh the 'array_music' is to save all the data you needed for the resume.
-   * @Josh I have built the structure, so you can add the data you need.
-  */
-  var array_music=[isPlaying, muted, track_index];
 
-  /**This will store the array to local storage. */
+function saveProgress(){
+  var array_music=[isPlaying, muted, liked, curr_track.volume, track_index];
   localStorage.setItem("array_music", JSON.stringify(array_music));
 }
 
-/**This will check and get the data from the local storage. */
 if(localStorage.getItem("array_music")!=null){
   var array_music=JSON.parse(localStorage.getItem("array_music"));
-  loadProgress(array_music); /**Call the next function to resume every data from the array. */
+  loadProgress(array_music);
 }
- /**Assign each data from the array the each variable that is needed for resume the music. */
 function loadProgress(state){
-  isPlaying=!state[0]; /**This is Done. */
-  muted=!state[1]; /**This is Done. */
+  isPlaying=!state[0];
+  muted=!state[1];
+  liked=!state[2];
+  curr_track.volume=state[3];
+
   playpauseTrack();
   muteunmute();
+  likeunlike();
 
-  track_index=state[2]; /**The rest is not done yet. @Josh your turn to complete it. */
+  track_index=state[2];
   
 }
