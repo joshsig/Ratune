@@ -839,17 +839,15 @@ header .close-share {
 /*The area of the filter feature*/
 .fil_feature_Container{
     position: absolute;
-    right: 0%;
-    top: 0%;
+    right: 0;
+    top: 0;
     z-index: 3;
 }
 .fil_feature_Container .fil_Btn{
-    position: absolute;
-    right: 5px;;
-    top: 5px;
     background-color: transparent;
     border-radius: 50%;
     border: none;
+    margin-top: 10%;
     width: 45px;
     height: 45px;
     transition: 0.5s;
@@ -867,9 +865,7 @@ header .close-share {
     right: 5px;
     width: 125px;
     height: 150px;
-    background: rgb(255,125,202);
-    background: linear-gradient(122deg, rgba(255,125,202,1) 8%, rgba(182,63,232,1) 47%, rgba(59,235,168,1) 93%);
-    box-shadow: 0px 0px 10px 10px rgb(225, 111, 200);
+    background-color: rgba(128, 128, 128, 0.582);
     border-radius: 15px 15px 15px 15px;
     transition: 0.5s;
     visibility: hidden;
@@ -877,15 +873,18 @@ header .close-share {
 }
 .fil_feature_Container .fil_Content .gerne_Selection{
     font-style: italic;
+    color: white;
     margin-top: 10px;
     text-align: center;
 }
 .fil_feature_Container .fil_Content .time_Selection{
     font-style: oblique;
+    color: white;
     margin-top: 10px;
     text-align: center;
 }
 .fil_feature_Container .fil_Content #doneFilter{
+    color: white;
     background-color: transparent;
     margin-top: 25px;
     text-align: center;
