@@ -30,7 +30,7 @@
     max-height: 1080px;
     border-radius: 25px;
     overflow: hidden;
-    background: black;
+    background: rgba(58, 57, 57, 0.7);
     padding: 50px 50px 50px 50px;
 }
 .limiter .container_SignIn .wrap_SignIn .logo{
@@ -40,21 +40,35 @@
     align-items: center;
     width: 45%;
     height: 100%;
+    padding-top: 100px;
 }
-.limiter .container_SignIn .wrap_SignIn .logo .web_Logo{
-    /*Add parameter to image*/
-    height: 50%;
-    width: 80%;
+.limiter .container_SignIn .wrap_SignIn .logo .web_Logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
 }
-.limiter .container_SignIn .wrap_SignIn .logo .icon{
-    /*Add parameter to image*/
+.limiter .container_SignIn .wrap_SignIn .logo .web_Logo_container img{
+    height: 350px;
+    width: 100%;
+}
+.limiter .container_SignIn .wrap_SignIn .logo .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 40%;
-    width: 50%;
+}
+.limiter .container_SignIn .wrap_SignIn .logo .icons img{
+    width: 150px;
+    height: 150px;
+    padding: 30px;
 }
 .limiter .container_SignIn .wrap_SignIn .input_Area{
     display: block;
     height: 100%;
     width: 45%;
+    padding-top: 95px;
 }
 .limiter .container_SignIn .wrap_SignIn .input_Area .title{
     display: block;
@@ -117,9 +131,10 @@
     text-align: center;
     color: red;
     display: block;
-    font-size: 15px;
+    font-size: 20px;
     height: 35px;
     width: 100%;
+    margin-bottom: 15px;
 }
 .limiter .container_SignIn .wrap_SignIn .input_Area .warningMsg #email_Empty{
     display: none;
