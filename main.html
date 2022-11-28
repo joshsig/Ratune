@@ -81,7 +81,7 @@
               <div class="box">
                   <img src="./imgs/plus-grad.png" alt="image">
               </div>
-              <button class="button shareButton"> share</button>
+              <button class="button shareButton">Share</button>
           </div>
         </div>
         
@@ -106,25 +106,25 @@
                   <img class="pfp" src="image"/>
                 </a>
               </div>
-              <div class="everyone">Everyone can see</div>
+              <div class="everyone" onclick="setting()">Everyone can see ▼</div>
             </div>
             <div class="caption">
               <input type="text" value="What's Up" onfocus="if(this.value == 'What\'s Up') { this.value = ''; }" onblur="if(this.value == '') { this.value='What\'s Up'; }"/>
             </div>
             <div class="post-divider"></div>
             <div class="add-song">
-              <div class="add">
+              <div class="add" onclick="setting()">
                 <i class="fas fa-plus-circle"> </i>
               </div>
               <div class="select-song">select song/artist/playlist</div>
-              <button class="share" onclick="nye()">Share</button>
+              <button class="share" onclick="setting()">Share</button>
             </div>
           </div>
         </li>
         <li class="post-block">
           <div class="timeline-post">
             <div class="post-info">
-              <div class="post-desc">
+              <div class="post-desc" onclick="setting()">
                 <div class="timeline-post-image">
                   <img 
                     src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
@@ -164,7 +164,7 @@
         <li class="post-block">
           <div class="timeline-post">
             <div class="post-info">
-              <div class="post-desc">
+              <div class="post-desc" onclick="setting()">
                 <div class="timeline-post-image">
                   <img 
                     src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
@@ -204,7 +204,7 @@
         <li class="post-block">
           <div class="timeline-post">
             <div class="post-info">
-              <div class="post-desc">
+              <div class="post-desc" onclick="setting()">
                 <div class="timeline-post-image">
                   <img 
                     src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
@@ -249,7 +249,7 @@
       <li class="search-form">
           <form action="">
               <label for=""><i class="fas fa-search"></i></label>
-              <input type="text" value="Search Ratune" onfocus="if(this.value == 'Search Ratune') { this.value = ''; }" onblur="if(this.value == '') { this.value='Search Ratune'; }">
+              <input type="text" value="Search Friends" onfocus="if(this.value == 'Search Friends') { this.value = ''; }" onblur="if(this.value == '') { this.value='Search Ratune'; }">
           </form>
       </li>
       <li class="side-block-friends">
