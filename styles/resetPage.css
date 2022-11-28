@@ -30,14 +30,14 @@
     max-height: 1080px;
     border-radius: 25px;
     overflow: hidden;
-    background: black;
+    background: rgba(58, 57, 57, 0.7);
     padding: 50px 50px 50px 50px;
 }
 .limiter .container_Reset .wrap_Reset .back_Button{
     position: absolute;
-    background-color: aqua;
-    height: 4%;
-    width: 2%;
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
 }
 .limiter .container_Reset .wrap_Reset .back_Button img{
     height: 100%;
@@ -45,17 +45,20 @@
 }
 .limiter .container_Reset .wrap_Reset .logo{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 45%;
-    height: 45%;
+    height: 100%;
+}
+.limiter .container_Reset .wrap_Reset .logo img{
+    width: 350px;
+    height: 350px;
 }
 .limiter .container_Reset .wrap_Reset .input_Area{
     display: block;
     height: 100%;
     width: 45%;
-    padding-top: 50px;
+    padding-top: 150px;
 }
 .limiter .container_Reset .wrap_Reset .input_Area .title{
     display: block;
@@ -110,7 +113,7 @@
     text-align: center;
     color: red;
     display: block;
-    font-size: 15px;
+    font-size: 20px;
     height: 35px;
     width: 100%;
 }
