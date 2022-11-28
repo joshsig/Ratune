@@ -67,6 +67,6 @@ if(pic==999){
 }
 
 function nye() {
-    console.log("Not Yet Implemented!");
+    confirm("Sorry! This feature is not yet implemented!");
 }
 

@@ -109,6 +109,11 @@ nav {
     transform: scale(75%);
 }
 
+.logout {
+    position: absolute;
+    bottom: 100px;
+}
+
 .icon {
     width: inherit;
     aspect-ratio: 1;

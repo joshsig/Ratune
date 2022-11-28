@@ -10,19 +10,36 @@ We had some deviations from our orignial design based on our classmate's and fri
 
 ## Usability "Sales Pitch"
 
-1. Visibility
+### Visibility
 
-- We made core navigation functions available as a side bar that allows the user to navigate the platform. Using clear icons and a pop-up name that describes the page when the user hovers over the button. 
-<img src="./imgs/writeup/navhov.jpeg" alt="nav" height="400"/>
-
-- The posts are structured using similarity and symmetry for the user to recognize the pattern seen on many platforms. This is designed to enhance their familiarity with our program.
+ - The posts are structured using similarity and symmetry for the user to recognize the pattern seen on many platforms. This is designed to enhance their familiarity with our program.
 
 <img src="./imgs/writeup/posts.png" alt="nav" height="300"/>
 
-### Feedback:
+ - In the Playlist view, we use closure to make the distinctions between the differing types of playlists. We also incorporate proximity to show the user that these playlists are part of the same grouping.
 
-- We used area with our pop ups to bring the user's focus to the icon they have clicked. We bring the figure to the foreground and blur the background. This pop up gives the user feedback in where they are navigating to. We display to the user the current page they are on by enlarging and highlighting the button corresponding to the current page.
+### Feedback
+
+ - We used area with our pop ups to bring the user's focus to the icon they have clicked. We bring the figure to the foreground and blur the background.
 
 <img src="./imgs/writeup/area.png" alt="nav" height="300"/>
 
-- In the Playlist view, we use closure to make the distinctions between the differing types of playlists. We also incorporate 
+ - We made core navigation functions available as a side bar that allows the user to navigate the platform. Using clear icons and a pop-up name that describes the page when the user hovers over the button. This pop up gives the user feedback in where they are navigating to. We display to the user the current page they are on by a small high contrast element next to the button corresponding to the current page.
+
+<img src="./imgs/writeup/navhov.jpeg" alt="nav" height="400"/>
+
+### Mapping
+
+- In the Explore page, the rotation of the Earth is very similar to rotating a globe in real life. This gives the Explore page a high degree of compatibility.
+
+### Consistency
+
+- We have a consistent graphical expression throughout the website. As well as the consistent view of both the navigation bar and music player. This allows the user to quickly adapt to our platform and understand functionalities with little confusion.
+
+### Simplicity
+
+- Each page has functions that are related to it without any excess use of controls that may confuse the user.
+
+### Recovery from Errors
+
+- Every function has a way back or a close button associated with it. This allows our users to never feel trapped somewhere in the platform. We see this with the close buttons that use contrast so it is easily distinguished.

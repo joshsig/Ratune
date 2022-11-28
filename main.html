@@ -25,19 +25,20 @@
         </li>
         <li class="divider"></li>
         <li class="sidebar-button">
+          <div class="curr-page-nav"></div>
+          <a href="main.html" class="icon" onclick="saveProgress()">
+            <img class="icon" src="./imgs/home.png" alt="Return to main page" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Home</h4>
+            </div>
+        </li>
+        <li class="sidebar-button">
           <a href="playlists.html" class="icon" onclick="saveProgress()">
             <img class="icon" src="./imgs/playlist.jpg" alt="Playlists" />
           </a>
           <div class="popper">
             <h4 class="popper-text">Playlists</h4>
-          </div>
-        </li>
-        <li class="sidebar-button">
-          <a class="icon" onclick="setting()">
-            <img class="icon" src="./imgs/settings.jpg" alt="Settings" />
-          </a>
-          <div class="popper">
-            <h4 class="popper-text">Settings</h4>
           </div>
         </li>
         <li class="sidebar-button">
@@ -48,6 +49,17 @@
             <h4 class="popper-text">Explore</h4>
           </div>
         </li>
+        <li class="sidebar-button">
+          <a class="icon" onclick="setting()">
+            <img class="icon" src="./imgs/settings.jpg" alt="Settings" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Settings</h4>
+          </div>
+        </li>
+        
+        <div class="divider">
+        </div>
         <li class="sidebar-button">
           <img class="icon" src="./imgs/post.jpg" onclick="toggleModal()"alt="Likes" />
           <div class="popper">
@@ -72,17 +84,15 @@
               <button class="button shareButton"> share</button>
           </div>
         </div>
-        <div class="divider">
-        </div>
+        
+        <div class="logout">
         <li class="sidebar-button">
-          <div class="curr-page-nav"></div>
-          <a href="main.html" class="icon" onclick="saveProgress()">
-            <img class="icon" src="./imgs/home.png" alt="Return to main page" />
-          </a>
+          <img class="icon" src="./imgs/logout.jpg" onclick="logout()"alt="Logout" />
           <div class="popper">
-            <h4 class="popper-text">Home</h4>
+            <h4 class="popper-text">Logout</h4>
+          </div>
         </li>
-        </div>
+      </div>
       </ul>
     </nav>
     <!-- Feed -->

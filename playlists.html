@@ -11,14 +11,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="./styles/playlist.css"/>
+    <link rel="stylesheet" href="./styles/playlist.css" />
   </head>
   <body>
     <nav>
       <ul class="sidebar-container">
         <li class="sidebar-button">
           <a href="profile.html" class="icon" onclick="saveProgress()">
-          <img class="icon" id="pfp" src="image" />
+            <img class="icon" id="pfp" src="image" />
           </a>
           <div class="popper">
             <h4 class="popper-text">Profile</h4>
@@ -26,12 +26,28 @@
         </li>
         <li class="divider"></li>
         <li class="sidebar-button">
+          <a href="main.html" class="icon" onclick="saveProgress()">
+            <img class="icon" src="./imgs/home.png" alt="Return to main page" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Home</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
           <div class="curr-page-nav"></div>
-          <a href="playlists.html" class="icon" onclick="saveProgress()" >
-            <img class="icon" src="./imgs/playlist.jpg" alt="Playlists"/>
+          <a href="playlists.html" class="icon" onclick="saveProgress()">
+            <img class="icon" src="./imgs/playlist.jpg" alt="Playlists" />
           </a>
           <div class="popper">
             <h4 class="popper-text">Playlists</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
+          <a href="explore.html" class="icon" onclick="saveProgress()">
+            <img class="icon" src="./imgs/explore.jpg" alt="Explore" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Explore</h4>
           </div>
         </li>
         <li class="sidebar-button">
@@ -42,64 +58,75 @@
             <h4 class="popper-text">Settings</h4>
           </div>
         </li>
+
+        <div class="divider"></div>
         <li class="sidebar-button">
-          <a href="explore.html" class="icon" onclick="saveProgress()">
-          <img class="icon" src="./imgs/explore.jpg" alt="Explore" />
-          </a>
-          <div class="popper">
-            <h4 class="popper-text">Explore</h4>
-          </div>
-        </li>
-        <li class="sidebar-button">
-          <img class="icon" src="./imgs/post.jpg" onclick="toggleModal()"alt="Likes" />
+          <img
+            class="icon"
+            src="./imgs/post.jpg"
+            onclick="toggleModal()"
+            alt="Likes"
+          />
           <div class="popper">
             <h4 class="popper-text">Create a Post!</h4>
           </div>
         </li>
         <div class="modal">
           <div class="modal-content">
-              <span class="close-button">&times;</span>
-              <div class="profile-pic">
-                  <img src="./imgs/boy.png" alt="profile picture">
-              </div>
-              <div class ="typewriter">
-                  <h1>What's up?</h1>
-              </div>
-              <div class ="caption">
-              <textarea id="textar" name="text" maxlength="140" placeholder="type here"></textarea>
-              </div>
-              <div class="box">
-                  <img src="./imgs/plus-grad.png" alt="image">
-              </div>
-              <button class="button shareButton"> share</button>
+            <span class="close-button">&times;</span>
+            <div class="profile-pic">
+              <img src="./imgs/boy.png" alt="profile picture" />
+            </div>
+            <div class="typewriter">
+              <h1>What's up?</h1>
+            </div>
+            <div class="caption">
+              <textarea
+                id="textar"
+                name="text"
+                maxlength="140"
+                placeholder="type here"
+              ></textarea>
+            </div>
+            <div class="box">
+              <img src="./imgs/plus-grad.png" alt="image" />
+            </div>
+            <button class="button shareButton">share</button>
           </div>
         </div>
-        <div class="divider">
-        </div>
-        <li class="sidebar-button">
-          <a href="main.html" class="icon" onclick="saveProgress()">
-            <img class="icon" src="./imgs/home.png" alt="Return to main page" />
-          </a>
-          <div class="popper">
-            <h4 class="popper-text">Home</h4>
-        </li>
+
+        <div class="logout">
+          <li class="sidebar-button">
+            <img
+              class="icon"
+              src="./imgs/logout.jpg"
+              onclick="logout()"
+              alt="Logout"
+            />
+            <div class="popper">
+              <h4 class="popper-text">Logout</h4>
+            </div>
+          </li>
         </div>
       </ul>
     </nav>
+
     <div class="playlist-container">
       <header>
         <span>Your Playlists</span>
         <div class="playlist-divider"></div>
       </header>
 
-     
       <ul class="playlists">
         <li class="playlist-add">
-            <img class="playlist-cover" src="./imgs/plus-grad.png"/>
+          <img class="playlist-cover" src="./imgs/plus-grad.png" />
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -109,7 +136,10 @@
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -119,7 +149,10 @@
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -129,7 +162,10 @@
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -147,7 +183,10 @@
       <ul class="playlists">
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -157,7 +196,10 @@
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -167,7 +209,10 @@
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -177,7 +222,10 @@
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -187,7 +235,10 @@
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -197,7 +248,10 @@
         </li>
         <li class="playlist-item">
           <a href="#">
-            <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
             <div class="playlist-overlay">
               <h1>Playlist Title</h1>
               <h2>Creator</h2>
@@ -207,101 +261,136 @@
         </li>
       </ul>
 
-    <header>
-      <span>Friend's Top Hits</span>
-      <div class="playlist-divider"></div>
-    </header>
+      <header>
+        <span>Friend's Top Hits</span>
+        <div class="playlist-divider"></div>
+      </header>
 
-    <ul class="playlists">
-      <li class="playlist-item">
-        <a href="#">
-          <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
-          <div class="playlist-overlay">
-            <h1>Playlist Title</h1>
-            <h2>Creator</h2>
-            <p>Description of this playlist</p>
-          </div>
-        </a>
-      </li>
-      <li class="playlist-item">
-        <a href="#">
-          <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
-          <div class="playlist-overlay">
-            <h1>Playlist Title</h1>
-            <h2>Creator</h2>
-            <p>Description of this playlist</p>
-          </div>
-        </a>
-      </li>
-      <li class="playlist-item">
-        <a href="#">
-          <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
-          <div class="playlist-overlay">
-            <h1>Playlist Title</h1>
-            <h2>Creator</h2>
-            <p>Description of this playlist</p>
-          </div>
-        </a>
-      </li>
-      <li class="playlist-item">
-        <a href="#">
-          <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
-          <div class="playlist-overlay">
-            <h1>Playlist Title</h1>
-            <h2>Creator</h2>
-            <p>Description of this playlist</p>
-          </div>
-        </a>
-      </li>
-      <li class="playlist-item">
-        <a href="#">
-          <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
-          <div class="playlist-overlay">
-            <h1>Playlist Title</h1>
-            <h2>Creator</h2>
-            <p>Description of this playlist</p>
-          </div>
-        </a>
-      </li>
-      <li class="playlist-item">
-        <a href="#">
-          <img class="playlist-cover" src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"/>
-          <div class="playlist-overlay">
-            <h1>Playlist Title</h1>
-            <h2>Creator</h2>
-            <p>Description of this playlist</p>
-          </div>
-        </a>
-      </li>
-    </ul>
-
-
+      <ul class="playlists">
+        <li class="playlist-item">
+          <a href="#">
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
+            <div class="playlist-overlay">
+              <h1>Playlist Title</h1>
+              <h2>Creator</h2>
+              <p>Description of this playlist</p>
+            </div>
+          </a>
+        </li>
+        <li class="playlist-item">
+          <a href="#">
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
+            <div class="playlist-overlay">
+              <h1>Playlist Title</h1>
+              <h2>Creator</h2>
+              <p>Description of this playlist</p>
+            </div>
+          </a>
+        </li>
+        <li class="playlist-item">
+          <a href="#">
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
+            <div class="playlist-overlay">
+              <h1>Playlist Title</h1>
+              <h2>Creator</h2>
+              <p>Description of this playlist</p>
+            </div>
+          </a>
+        </li>
+        <li class="playlist-item">
+          <a href="#">
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
+            <div class="playlist-overlay">
+              <h1>Playlist Title</h1>
+              <h2>Creator</h2>
+              <p>Description of this playlist</p>
+            </div>
+          </a>
+        </li>
+        <li class="playlist-item">
+          <a href="#">
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
+            <div class="playlist-overlay">
+              <h1>Playlist Title</h1>
+              <h2>Creator</h2>
+              <p>Description of this playlist</p>
+            </div>
+          </a>
+        </li>
+        <li class="playlist-item">
+          <a href="#">
+            <img
+              class="playlist-cover"
+              src="https://64.media.tumblr.com/118168dcfcdd6a6ac02a103c0a46b777/tumblr_o2pog52QHO1v8esjzo1_640.jpg"
+            />
+            <div class="playlist-overlay">
+              <h1>Playlist Title</h1>
+              <h2>Creator</h2>
+              <p>Description of this playlist</p>
+            </div>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="playlist-modal">
-        <span class="close-button-pl">&times;</span>
-        <div class="playlist-info-container">
-            <h1>Make Playlist</h1>
-            <div class="playlist-img-select">
-                <input type="file" id="upload" name="playlist-img" onchange="readURL(this)" style="visibility: hidden;" />
-                    <a href="" onclick="document.getElementById('upload').click(); return false;">
-                        <img id="pl-cover" src="./imgs/plus-grad.png" alt="Select Playlist Image"/>
-                    </a>
-            </div>
-            <input type="text" value="Name Your Playlist!" onfocus="if(this.value == 'Name Your Playlist!') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Name Your Playlist!'; }"class="playlist-title-input"/>  
+      <span class="close-button-pl">&times;</span>
+      <div class="playlist-info-container">
+        <h1>Make Playlist</h1>
+        <div class="playlist-img-select">
+          <input
+            type="file"
+            id="upload"
+            name="playlist-img"
+            onchange="readURL(this)"
+            style="visibility: hidden"
+          />
+          <a
+            href=""
+            onclick="document.getElementById('upload').click(); return false;"
+          >
+            <img
+              id="pl-cover"
+              src="./imgs/plus-grad.png"
+              alt="Select Playlist Image"
+            />
+          </a>
         </div>
-        <div class="songs-container">
-          <div class="divider"></div>
-            <ul class="playlist-add-song">
-              <li class="add-song">Add Songs! (Not Yet Implemented)</li>
-              <li class="empty-song">Empty Spot for Song</li>
-              <li class="empty-song">Empty Spot for Song</li>
-              <li class="empty-song">Empty Spot for Song</li>
-              <li class="empty-song">Empty Spot for Song</li>
-              <li class="empty-song">Empty Spot for Song</li>
-            </ul>
-        </div>
-        <button class="save-playlist">Save</button>
+        <input
+          type="text"
+          value="Name Your Playlist!"
+          onfocus="if(this.value == 'Name Your Playlist!') { this.value = ''; }"
+          onblur="if(this.value == '') { this.value = 'Name Your Playlist!'; }"
+          class="playlist-title-input"
+        />
+      </div>
+      <div class="songs-container">
+        <div class="divider"></div>
+        <ul class="playlist-add-song">
+          <li class="add-song">Add Songs! (Not Yet Implemented)</li>
+          <li class="empty-song">Empty Spot for Song</li>
+          <li class="empty-song">Empty Spot for Song</li>
+          <li class="empty-song">Empty Spot for Song</li>
+          <li class="empty-song">Empty Spot for Song</li>
+          <li class="empty-song">Empty Spot for Song</li>
+        </ul>
+      </div>
+      <button class="save-playlist">Save</button>
     </div>
 
     <div class="music-player">
@@ -325,62 +414,73 @@
       <div class="progress-controller">
         <div class="slider-container">
           <div class="current-time">00:00</div>
-            <input type="range" value="0" class="seek-slider" onchange="seekTo()">
+          <input
+            type="range"
+            value="0"
+            class="seek-slider"
+            onchange="seekTo()"
+          />
           <div class="total-duration">00:00</div>
         </div>
-    
-    <div class="control-buttons">
-        <div class="prev-btn" onclick="prevTrack()">
-          <i class="fas fa-step-backward"></i>
-        </div>
-      <div class="playpause-song" onclick="playpauseTrack()">
-        
-          <i class="fa fa-play-circle fa-2x"></i>
-      </div>
-      <div class="next-btn" onclick="nextTrack()">
-      <i class="fas fa-step-forward"></i>
-    </div>
-    </div>
-    </div>
-    <div class="features">
-      <div class="queue-btn">
-        <i class="fa fa-bars"></i>
-      </div>
-      <div class="share-btn">
-        <i class="fa fa-share-alt"></i>
-      </div>
-      <div class="share-popup">
-        <header>
-          <span>Share</span>
-          <div class="close-share"><i class="fas fa-times"></i></div>
-        </header>
-        <div class="share-content">
-          <p>Share this Song via</p>
-          <ul class="share-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-telegram"></i></a>
-          </ul>
-          <p>or copy link</p>
-          <div class="share-field">
-            <i class="uil uil-link"></i>
-            <input type="text" value="Ratune.com/link">
-            <button>Copy</button>
+
+        <div class="control-buttons">
+          <div class="prev-btn" onclick="prevTrack()">
+            <i class="fas fa-step-backward"></i>
+          </div>
+          <div class="playpause-song" onclick="playpauseTrack()">
+            <i class="fa fa-play-circle fa-2x"></i>
+          </div>
+          <div class="next-btn" onclick="nextTrack()">
+            <i class="fas fa-step-forward"></i>
           </div>
         </div>
       </div>
-      <div class="volume-bar">
-        <div class="volume-btn" onclick="muteunmute()">
-          <i class="fas fa-volume-down"></i>
+      <div class="features">
+        <div class="queue-btn">
+          <i class="fa fa-bars"></i>
         </div>
-        <div class="progress-bar">
-          <input type="range" min="1" max="100" value="6" class="volume-slider" onchange="setVolume()">
+        <div class="share-btn">
+          <i class="fa fa-share-alt"></i>
+        </div>
+        <div class="share-popup">
+          <header>
+            <span>Share</span>
+            <div class="close-share"><i class="fas fa-times"></i></div>
+          </header>
+          <div class="share-content">
+            <p>Share this Song via</p>
+            <ul class="share-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+            </ul>
+            <p>or copy link</p>
+            <div class="share-field">
+              <i class="uil uil-link"></i>
+              <input type="text" value="Ratune.com/link" />
+              <button>Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="volume-bar">
+          <div class="volume-btn" onclick="muteunmute()">
+            <i class="fas fa-volume-down"></i>
+          </div>
+          <div class="progress-bar">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="6"
+              class="volume-slider"
+              onchange="setVolume()"
+            />
+          </div>
         </div>
       </div>
     </div>
-    </div>
-    
+
     <script src="./scripts/music.js"></script>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/playlist.js"></script>
