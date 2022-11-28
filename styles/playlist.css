@@ -29,7 +29,7 @@
     padding-top: 1vh;
     justify-content: center;
     font-size: 25px;
-    color: var(--green-color);
+    color: var(--color-full-white);
 }   
 
 .playlist-item a {
