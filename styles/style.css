@@ -514,6 +514,13 @@ header .close-share {
     border-width: 2px;
     opacity: 50%;
     font-size: 15px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
 
 .caption {
@@ -531,6 +538,7 @@ header .close-share {
     background-color: var(--color-grey-dark);
     color: var(--color-full-white);
     font-size: 20px;
+    outline: none;
 }
 
 
@@ -578,8 +586,11 @@ header .close-share {
     margin-left: 30%;
     font-size:16px;
     font-weight: bold;
-    color: var(--color-full-white);
     cursor: pointer;
+    transition-duration: 0.4s;
+}
+.share:hover {
+    color: white;
 }
 
 .timeline-post {
@@ -614,6 +625,7 @@ header .close-share {
     align-items: left;
     overflow: hidden;
     color: var(--color-full-white);
+    cursor: pointer;
 }
 
 .timeline-post-username {
@@ -946,12 +958,17 @@ header .close-share {
 .profile-info {
     display: flex;
     align-items: center;
-    color: #CD5C5C;
+    color: var(--primary-color);
     font: italic 30px "Fira Sans", serif;
 }
 
 .profile-info h3 {
     margin-left: 10%;
+}
+
+.profile-info h6 {
+    margin-left: 10%;
+    width: 200%;
 }
 
 .account-dp {
@@ -966,7 +983,7 @@ header .close-share {
     margin-left:100px;
 
     font-size: 35px;
-    color: goldenrod;
+    color: darkorchid;
 }
 
 .modal {
@@ -1015,11 +1032,10 @@ header .close-share {
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 .button {
-    border: none;
+    border: 0;
     color: white;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
@@ -1029,18 +1045,21 @@ header .close-share {
     position: absolute;
     left: 510px;
     top: 80%;
-  }
-.shareButton{
-  background-color: var(--green-hover-color); 
-  color: black; 
-  border: 2px solid #301934;
- 
-
+    border-radius: 20px;
+    font-size: 16px;
 }
+
+.shareButton {
+    background-color: var(--primary-color);
+    color: black;
+    border: 2px solid #301934;
+    font-weight: bold;
+}
+
 .shareButton:hover {
-    background-color:var(--green-color);
+    background-color: var(--primary-color);
     color: white;
-  }
+}
   
   
   .typewriter {
@@ -1136,3 +1155,35 @@ header .close-share {
         top: 0px;
 
     }
+   
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+#textar {
+    margin: 10px 0px 20px 45px;
+    width: 60%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid rgb(12, 10, 10);
+    border-radius: 4px;
+    background-color: #45494e;
+    font-size: 16px;
+    position: relative;
+    left: 150px;
+    top: 0px;
+}
+.profile-desc{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    float:right;
+    overflow: hidden;
+    color: var(--color-full-white);
+    margin-left: 55vw;
+    scale: 90%;
+    cursor: pointer;
+}

@@ -91,7 +91,7 @@
             <div class="box">
               <img src="./imgs/plus-grad.png" alt="image" />
             </div>
-            <button class="button shareButton">share</button>
+            <button class="button shareButton" onclick="setting()">Share</button>
           </div>
         </div>
 
@@ -229,21 +229,25 @@
       <ul class="profile-timeline">
         <li class="create-post-block">
           <div class="timeline-createPost">
-            <div class="profile-pic">
-              <a href="profile.html" class="icon">
-                <img class="pfp" id="pfp" src="image" />
-              </a>
+            <div class="profile-top">
+              <div class="profile-pic">
+                <a href="profile.html" class="icon">
+                  <img class="pfp" src="image"/>
+                </a>
+              </div>
+              <div class="everyone" onclick="setting()">Everyone can see ▼</div>
             </div>
             <div class="caption">
-              <input
-                type="text"
-                value="What's Up"
-                onfocus="if(this.value == 'What\'s Up') { this.value = ''; }"
-                onblur="if(this.value == '') { this.value='What\'s Up'; }"
-              />
+              <input type="text" value="What's Up" onfocus="if(this.value == 'What\'s Up') { this.value = ''; }" onblur="if(this.value == '') { this.value='What\'s Up'; }"/>
             </div>
-            <div class="select-song">select song</div>
-            <button class="share" onclick="nye()">Share</button>
+            <div class="post-divider"></div>
+            <div class="add-song">
+              <div class="add" onclick="setting()">
+                <i class="fas fa-plus-circle"> </i>
+              </div>
+              <div class="select-song">select song/artist/playlist</div>
+              <button class="share" onclick="setting()">Share</button>
+            </div>
           </div>
         </li>
         <li class="post-block">
@@ -373,12 +377,22 @@
     <div class="user-account">
       <div class="profile-dp">
         <div class="profile-info">
-          <img src="null" class="account-dp" />
+          <img src="null" class="account-dp">
           <div>
             <h3>
-              User Name
-              <p>120 ratunies</p>
+              UserName
+              <h6>Profile info goes here</h6>
+              <h6>More information related to friends</h6>
             </h3>
+          </div>
+        <div class="profile-desc" onclick="setting()">
+          <div class="timeline-post-image">
+            <img src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+              alt="cover" />
+          </div>
+          <div class="post-title">Profile Song</div>
+          </div>
+          
           </div>
         </div>
       </div>
