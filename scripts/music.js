@@ -226,7 +226,7 @@ function loadProgress(state){
   }
   muted=!state[1];
   liked=!state[2];
-  curr_track.volume=state[3]/100;
+  curr_track.volume=state[3] / 100;
   volume_slider.value=state[3];
   prev_vol=curr_track.volume;
   if(!muted){
