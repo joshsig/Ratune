@@ -355,7 +355,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
 .share-popup {
-    background-color: #303040;
+    background-color: #474747;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -378,11 +378,12 @@ input[type=range]::-webkit-slider-thumb {
 
 .share-popup header {
     display: flex;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     align-items: center;
     justify-content: space-between;
+    color: #fff;
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 500; 
 }
 
 .share-content input {
@@ -407,8 +408,21 @@ header .close-share {
     cursor: pointer;
 }
 
+.share-divider {
+    width: 100%;
+    background-color: var(--color-full-white);
+    height: 2px;
+    border-radius: 2px;
+    opacity: 100%;
+}
+
 .share-content {
     margin: 20px 0;
+    color: #fff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .share-content p {
@@ -419,8 +433,8 @@ header .close-share {
     justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 100px;
-    transform: scale(1.6);
+    margin-left: 80px;
+    transform: scale(2);
 }
 
 .share-icons a {
@@ -429,6 +443,37 @@ header .close-share {
     text-decoration: none;
     justify-content: space-between;
 }
+
+.share-field {
+    display: flex;
+    flex-direction: row; 
+    background-color: rgba(155, 155, 155, 0.596);
+    border-radius:10px;
+    padding: 8px;
+}
+
+.link input{
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    width:150px;
+}
+
+
+.copy {
+    background-color: #474747;
+    color: var(--color-full-white);
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.copy:hover {
+    background-color: var(--primary-color);
+}
+
 
 .timeline-wrapper {
     
@@ -844,9 +889,8 @@ header .close-share {
 
 /*The area of the filter feature*/
 .fil_feature_Container{
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: relative;
+    right: -10px;
     z-index: 3;
 }
 .fil_feature_Container .fil_Btn{
@@ -905,7 +949,7 @@ header .close-share {
 /*Position of the search feature*/
 .search_Container{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     padding-left: 30%;
     padding-right: 30%;
@@ -943,7 +987,7 @@ header .close-share {
 }
 .user-account {
     background-color: var(--color-grey-dark);
-    min-height: 25%;
+    height: 250px;
     margin-left: 90px;
     margin-bottom: 140px;
     margin-top: 10px;
@@ -978,7 +1022,9 @@ header .close-share {
 
 .account-dp {
     width: 250px;
+    height: 250px;
     border-radius: 50%;
+    padding: 15px;
 }
 
 .account-dp-non {
@@ -1193,7 +1239,7 @@ header .close-share {
     float:right;
     overflow: hidden;
     color: var(--color-full-white);
-    margin-left: 55vw;
+    margin-left: 54vw;
     scale: 90%;
     cursor: pointer;
 }
