@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ratune</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <!--Sidebar Navigation-->
+    <nav>
+      <ul class="sidebar-container">
+        <li class="sidebar-button">
+          <div class="curr-page-nav"></div>
+          <a href="profile.html" class="icon" onclick="saveProgress()">
+            <img class="icon" id="pfp" src="image" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Profile</h4>
+          </div>
+        </li>
+        <li class="divider"></li>
+        <li class="sidebar-button">
+          <a href="main.html" class="icon" onclick="saveProgress()">
+            <img class="icon" src="./imgs/home.png" alt="Return to main page" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Home</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
+          <a href="playlists.html" class="icon" onclick="saveProgress()">
+            <img class="icon" src="./imgs/playlist.jpg" alt="Playlists" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Playlists</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
+          <a href="explore.html" class="icon" onclick="saveProgress()">
+            <img class="icon" src="./imgs/explore.jpg" alt="Explore" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Explore</h4>
+          </div>
+        </li>
+        <li class="sidebar-button">
+          <a class="icon" onclick="setting()">
+            <img class="icon" src="./imgs/settings.jpg" alt="Settings" />
+          </a>
+          <div class="popper">
+            <h4 class="popper-text">Settings</h4>
+          </div>
+        </li>
+
+        <div class="divider"></div>
+        <li class="sidebar-button">
+          <img
+            class="icon"
+            src="./imgs/post.jpg"
+            onclick="toggleModal()"
+            alt="Likes"
+          />
+          <div class="popper">
+            <h4 class="popper-text">Create a Post!</h4>
+          </div>
+        </li>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="profile-pic">
+              <img src="./imgs/boy.png" alt="profile picture" />
+            </div>
+            <div class="typewriter">
+              <h1>What's up?</h1>
+            </div>
+            <div class="caption">
+              <textarea
+                id="textar"
+                name="text"
+                maxlength="140"
+                placeholder="type here"
+              ></textarea>
+            </div>
+            <div class="box">
+              <img src="./imgs/plus-grad.png" alt="image" />
+            </div>
+            <button class="button shareButton" onclick="setting()">Share</button>
+          </div>
+        </div>
+
+        <div class="logout">
+          <li class="sidebar-button">
+            <img
+              class="icon"
+              src="./imgs/logout.jpg"
+              onclick="logout()"
+              alt="Logout"
+            />
+            <div class="popper">
+              <h4 class="popper-text">Logout</h4>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Profile right -->
+    <ul class="right-bar">
+      <li class="side-block-friends">
+        <div class="friend-status">Your Favourite Songs</div>
+        <ul class="friends">
+          <li class="friend">
+            <div class="play-image">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="status">
+              <div class="friend-user">Song Name</div>
+              <div class="curr-song">Artist</div>
+              <div class="curr-artist">Album</div>
+            </div>
+          </li>
+          <li class="friend">
+            <div class="play-image">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="status">
+              <div class="friend-user">Song Name</div>
+              <div class="curr-song">Artist</div>
+              <div class="curr-artist">Album</div>
+            </div>
+          </li>
+          <li class="friend">
+            <div class="play-image">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="status">
+              <div class="friend-user">Song Name</div>
+              <div class="curr-song">Artist</div>
+              <div class="curr-artist">Album</div>
+            </div>
+          </li>
+          <li class="friend">
+            <div class="play-image">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="status">
+              <div class="friend-user">Song Name</div>
+              <div class="curr-song">Artist</div>
+              <div class="curr-artist">Album</div>
+            </div>
+          </li>
+          <li class="friend">
+            <div class="play-image">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="status">
+              <div class="friend-user">Song Name</div>
+              <div class="curr-song">Artist</div>
+              <div class="curr-artist">Album</div>
+            </div>
+          </li>
+          <li class="friend">
+            <div class="play-image">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="status">
+              <div class="friend-user">Song Name</div>
+              <div class="curr-song">Artist</div>
+              <div class="curr-artist">Album</div>
+            </div>
+          </li>
+          <li class="friend">
+            <div class="play-image">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="status">
+              <div class="friend-user">Song Name</div>
+              <div class="curr-song">Artist</div>
+              <div class="curr-artist">Album</div>
+            </div>
+          </li>
+          <li class="friend">
+            <div class="play-image">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="status">
+              <div class="friend-user">Song Name</div>
+              <div class="curr-song">Artist</div>
+              <div class="curr-artist">Album</div>
+            </div>
+          </li>
+        </ul>
+      </li>
+
+      <li class="side-block-suggestion">
+        <div class="people-you-might">Your Friends</div>
+        <ul class="suggestions">
+          <li class="suggestion">
+            <div class="friend-image">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="friend-user">username</div>
+          </li>
+          <li class="suggestion">
+            <div class="friend-image">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="friend-user">username</div>
+          </li>
+          <li class="suggestion">
+            <div class="friend-image">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="friend-user">username</div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Feed -->
+    <div class="timeline-wrapper">
+      <ul class="profile-timeline">
+        <li class="post-block">
+          <div class="timeline-post">
+            <div class="post-info">
+              <div class="post-desc">
+                <div class="timeline-post-image">
+                  <img
+                    src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+                    alt="cover"
+                  />
+                </div>
+                <div class="post-title">Song Title</div>
+                <div class="post-artist">Artist</div>
+              </div>
+
+              <div class="post-content">
+                <div class="timeline-post-username">
+                  <div class="user-pic">
+                    <a href="profile1.html" class="icon">
+                      <img class="pfp1" src="imgs/profile1.jfif" />
+                    </a>
+                  </div>
+                  <div class="username">profile1</div>
+                </div>
+
+                <div class="post-caption">caption is here</div>
+                <div class="timeline-post-actions">
+                  <div class="like" onclick="likeunlike()">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="repost">
+                    <i class="fas fa-sync"></i>
+                  </div>
+                  <div class="comment">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="post-block">
+          <div class="timeline-post">
+            <div class="post-info">
+              <div class="post-desc">
+                <div class="timeline-post-image">
+                  <img
+                    src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+                    alt="cover"
+                  />
+                </div>
+                <div class="post-title">Song Title</div>
+                <div class="post-artist">Artist</div>
+              </div>
+
+              <div class="post-content">
+                <div class="timeline-post-username">
+                  <div class="user-pic">
+                    <a href="profile1.html" class="icon">
+                      <img class="pfp1" src="imgs/profile1.jfif" />
+                    </a>
+                  </div>
+                  <div class="username">profile1</div>
+                </div>
+
+                <div class="post-caption">caption is here</div>
+                <div class="timeline-post-actions">
+                  <div class="like" onclick="likeunlike()">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="repost">
+                    <i class="fas fa-sync"></i>
+                  </div>
+                  <div class="comment">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="post-block">
+          <div class="timeline-post">
+            <div class="post-info">
+              <div class="post-desc">
+                <div class="timeline-post-image">
+                  <img
+                    src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+                    alt="cover"
+                  />
+                </div>
+                <div class="post-title">Song Title</div>
+                <div class="post-artist">Artist</div>
+              </div>
+
+              <div class="post-content">
+                <div class="timeline-post-username">
+                  <div class="user-pic">
+                    <a href="profile1.html" class="icon">
+                      <img class="pfp1" src="imgs/profile1.jfif" />
+                    </a>
+                  </div>
+                  <div class="username">profile1</div>
+                </div>
+
+                <div class="post-caption">caption is here</div>
+                <div class="timeline-post-actions">
+                  <div class="like" onclick="likeunlike()">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="repost">
+                    <i class="fas fa-sync"></i>
+                  </div>
+                  <div class="comment">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Profile cover -->
+    <div class="user-account">
+      <div class="profile-dp">
+        <div class="profile-info">
+          <img src="./imgs/profile1.jfif" class="account-dp-non">
+          <div>
+            <h3>
+              Profile1
+              <h6>Profile info goes here</h6>
+              <h6>More information related to friends</h6>
+            </h3>
+          </div>
+        <div class="profile-desc" onclick="setting()">
+          <div class="timeline-post-image">
+            <img src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+              alt="cover" />
+          </div>
+          <div class="post-title">Profile Song</div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="tab">Profile1 Acitivy</h3>
+
+    <!-- music player at bottom of screen -->
+    <div class="music-player">
+      <div class="song-bar">
+        <div class="song-info">
+          <div class="image-container">
+            <img
+              src="https://coverartarchive.org/release/590319a1-6e5e-46f3-9a43-5dfb16f028c8/30960977354.jpg"
+              alt="cover"
+            />
+          </div>
+          <div class="song-desc">
+            <div class="title">Turkey Basted</div>
+            <div class="artist">Farah's Band</div>
+          </div>
+        </div>
+        <div class="icon-like" onclick="likeunlike()">
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+      <div class="progress-controller">
+        <div class="slider-container">
+          <div class="current-time">00:00</div>
+          <input
+            type="range"
+            value="0"
+            class="seek-slider"
+            onchange="seekTo()"
+          />
+          <div class="total-duration">00:00</div>
+        </div>
+
+        <div class="control-buttons">
+          <div class="prev-btn" onclick="prevTrack()">
+            <i class="fas fa-step-backward"></i>
+          </div>
+          <div class="playpause-song" onclick="playpauseTrack()">
+            <i class="fa fa-play-circle fa-2x"></i>
+          </div>
+          <div class="next-btn" onclick="nextTrack()">
+            <i class="fas fa-step-forward"></i>
+          </div>
+        </div>
+      </div>
+      <div class="features">
+        <div class="queue-btn">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div class="share-btn">
+          <i class="fa fa-share-alt"></i>
+        </div>
+        <div class="share-popup">
+          <header>
+            <span>Share</span>
+            <div class="close-share"><i class="fas fa-times"></i></div>
+          </header>
+          <div class="share-content">
+            <p>Share this Song via</p>
+            <ul class="share-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+            </ul>
+            <p>or copy link</p>
+            <div class="share-field">
+              <i class="uil uil-link"></i>
+              <input type="text" value="Ratune.com/link" />
+              <button>Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="volume-bar">
+          <div class="volume-btn" onclick="muteunmute()">
+            <i class="fas fa-volume-down"></i>
+          </div>
+          <div class="progress-bar">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="6"
+              class="volume-slider"
+              onchange="setVolume()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/music.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/share.js"></script>
+  </body>
+</html>

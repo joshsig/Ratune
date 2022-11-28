@@ -126,6 +126,12 @@ nav {
     border-radius: inherit;
 }
 
+.pfp1{
+    width: inherit;
+    aspect-ratio: 1;
+    border-radius: inherit;
+}
+
 .curr-page-nav {
     width: 35px;
     height: 20px;
@@ -972,6 +978,11 @@ header .close-share {
 }
 
 .account-dp {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.account-dp-non {
     width: 250px;
     border-radius: 50%;
 }
