@@ -199,7 +199,7 @@ function seekUpdate() {
 }
 
 function saveProgress(){
-  var array_music=[isPlaying, muted, liked, volume_slider.value, track_index];
+  var array_music=[isPlaying, muted, liked, volume_slider.value, track_index, (curr_track.currentTime*100)];
   localStorage.setItem("array_music", JSON.stringify(array_music));
 }
 
@@ -215,7 +215,6 @@ function loadProgress(state){
   }
   isPlaying=!state[0];
   if(isPlaying){
-    isPlaying=!isPlaying;
     playpauseTrack();
   }else{
     isPlaying=!isPlaying;
@@ -231,4 +230,5 @@ function loadProgress(state){
     muted=!muted;
   }
   likeunlike();
+  curr_track.currentTime=state[5]/100;
 }
