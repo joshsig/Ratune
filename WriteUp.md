@@ -43,3 +43,5 @@ We had some deviations from our orignial design based on our classmate's and fri
 ### Recovery from Errors
 
 - Every function has a way back or a close button associated with it. This allows our users to never feel trapped somewhere in the platform. We see this with the close buttons that use contrast so it is easily distinguished.
+
+<img src="./imgs/reco.png" alt="reco" height="300"/>
