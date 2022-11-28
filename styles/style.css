@@ -1030,11 +1030,9 @@ header .close-share {
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: var(--green-hover-color);
+    transform: scale(2);
 }
 
-.close-button:hover {
-    background-color:  var(--green-color);  
-}
 
 .show-modal {
     opacity: 1;
