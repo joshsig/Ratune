@@ -22,7 +22,6 @@ let muted = false;
 let liked = false;
 let startVolume=50/100;
 
-
 let track_index = 0;
 let updateTimer;
 
@@ -30,6 +29,7 @@ let curr_track = document.createElement('audio');
 
 curr_track.volume = startVolume;
 let prev_vol = curr_track.volume;
+volume_slider.value=curr_track.volume*100;
 
 let track_list = [
   {
@@ -113,12 +113,14 @@ function playpauseTrack() {
     muted = true;
     prev_vol = curr_track.volume;
     curr_track.volume = 0;
+    volume_slider.value=0;
     mute_btn.innerHTML = '<i class="fas fa-volume-off"></i>';
   }
 
   function unmute() {
     muted = false;
     curr_track.volume = prev_vol;
+    volume_slider.value=curr_track.volume*100;
     mute_btn.innerHTML = '<i class="fas fa-volume-down"></i>';
   }
 
@@ -168,7 +170,7 @@ function seekTo() {
 }
 
 function setVolume() {
-  curr_track.volume = volume_slider.value / 100;
+  curr_track.volume = volume_slider.value/100;
   prev_vol=curr_track.volume;
   unmute();
 }
@@ -196,9 +198,8 @@ function seekUpdate() {
   }
 }
 
-
 function saveProgress(){
-  var array_music=[isPlaying, muted, liked, curr_track.volume, track_index];
+  var array_music=[isPlaying, muted, liked, volume_slider.value, track_index];
   localStorage.setItem("array_music", JSON.stringify(array_music));
 }
 
@@ -206,16 +207,28 @@ if(localStorage.getItem("array_music")!=null){
   var array_music=JSON.parse(localStorage.getItem("array_music"));
   loadProgress(array_music);
 }
+
 function loadProgress(state){
+  numTrack=state[4];
+  for(var i=0; i<numTrack; i++){
+    nextTrack();
+  }
   isPlaying=!state[0];
+  if(isPlaying){
+    isPlaying=!isPlaying;
+    playpauseTrack();
+  }else{
+    isPlaying=!isPlaying;
+  }
   muted=!state[1];
   liked=!state[2];
-  curr_track.volume=state[3];
-
-  playpauseTrack();
-  muteunmute();
+  curr_track.volume=state[3]/100;
+  volume_slider.value=state[3];
+  prev_vol=curr_track.volume;
+  if(!muted){
+    muteunmute();
+  }else{
+    muted=!muted;
+  }
   likeunlike();
-
-  track_index=state[2];
-  
 }
