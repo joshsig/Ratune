@@ -210,14 +210,19 @@ if(localStorage.getItem("array_music")!=null){
 
 function loadProgress(state){
   numTrack=state[4];
-  for(var i=0; i<numTrack; i++){
-    nextTrack();
-  }
   isPlaying=!state[0];
-  if(isPlaying){
-    playpauseTrack();
+  if(numTrack!=0){
+    for(var i=0; i<numTrack; i++){
+      nextTrack();
+    }
+
+    if(isPlaying){
+      isPlaying=!isPlaying;
+      playpauseTrack();
+    }
+
   }else{
-    isPlaying=!isPlaying;
+    playpauseTrack();
   }
   muted=!state[1];
   liked=!state[2];
